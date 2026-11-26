@@ -1,0 +1,3020 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="artifact-type" content="tool">
+<meta name="design-style" content="briefing">
+<title>Asesmen Ekonomi Kelas XII Semester Ganjil — Kuis Interaktif HOTS</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  color-scheme: light;
+
+  /* Page and surfaces: warm stone-white paper */
+  --background: #faf9f5;
+  --surface-container-low: #ffffff;
+  --surface-container: #f1efe8;
+  --surface-container-high: #e6e2d6;
+
+  /* Ink */
+  --on-surface: #17181a;
+  --on-surface-variant: #56585c;
+
+  /* Rules */
+  --outline: #17181a;
+  --outline-variant: #dedad0;
+  --outline-button: #c8c4b8;
+
+  /* Accents */
+  --primary: #17181a;
+  --on-primary: #faf9f5;
+  --primary-container: #f2b705;
+  --on-primary-container: #17181a;
+  --secondary: #1f4e5f;
+  --secondary-soft: #eaf1f4;
+  --tertiary: #785008;
+  --tag-bg: #f5e6c4;
+  --error: #b42318;
+  --error-soft: #fef3f2;
+  --on-error: #ffffff;
+
+  /* Semantic & Focus */
+  --positive: #2b6e52;
+  --positive-soft: #edf7f2;
+  --warning: #9a5b00;
+  --warning-soft: #fff8eb;
+  --focus: #1f4e5f;
+
+  /* Data series */
+  --data-1: #1f4e5f;
+  --data-2: #d99000;
+  --data-3: #2b6e52;
+  --data-4: #b84a39;
+  --data-context: #c4bfb2;
+
+  /* Fonts */
+  --font-headline: 'Source Serif 4', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-label: 'Geist Mono', ui-monospace, monospace;
+
+  /* Type scale (Focused Tool) */
+  --display-size: clamp(1.75rem, 1.4rem + 1.2vw, 2.35rem);
+  --headline-size: clamp(1.25rem, 1.1rem + 0.5vw, 1.5rem);
+  --subhead-size: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+  --body-size: clamp(0.9375rem, 0.9rem + 0.15vw, 1rem);
+  --label-size: 0.75rem;
+
+  /* Spacing scale */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+  --space-2xl: 4rem;
+
+  /* Shape & Style effects */
+  --rounded: 0.25rem;
+  --rounded-lg: 0.375rem;
+  --badge-radius: 2px;
+  --section-rule: 1.5px solid var(--outline);
+  --card-border: 1px solid var(--outline-variant);
+  --heading-tracking: -0.02em;
+  --label-tracking: 0.08em;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+}
+
+/* Base reset */
+*, *::before, *::after { box-sizing: border-box; }
+html, body {
+  overflow-x: clip;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  color: var(--on-surface);
+  font-family: var(--font-body);
+  font-size: var(--body-size);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+header { position: static !important; }
+button, input, select, textarea { font-family: inherit; font-size: inherit; }
+
+.page-grid {
+  display: grid;
+  gap: var(--space-lg);
+  padding: var(--space-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.page-grid * { min-width: 0; }
+
+/* Focus ring */
+:focus-visible {
+  outline: 2.5px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* Dossier Treatment */
+.dossier-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  border-bottom: var(--section-rule);
+  padding-bottom: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+.dossier-bar-left {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-sm);
+}
+.dossier-pill {
+  background: var(--primary-container);
+  color: var(--on-primary-container);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: var(--label-size);
+  letter-spacing: var(--label-tracking);
+  text-transform: uppercase;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--badge-radius);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+.dossier-meta {
+  font-family: var(--font-label);
+  font-size: var(--label-size);
+  font-weight: 500;
+  color: var(--on-surface-variant);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.title {
+  font-family: var(--font-headline);
+  font-size: var(--display-size);
+  font-weight: 600;
+  letter-spacing: var(--heading-tracking);
+  line-height: 1.1;
+  color: var(--on-surface);
+  margin: 0;
+}
+.standfirst {
+  font-family: var(--font-body);
+  font-size: var(--subhead-size);
+  font-weight: 600;
+  color: var(--secondary);
+  margin: var(--space-xs) 0 0 0;
+  max-width: 72ch;
+}
+.section-heading {
+  font-family: var(--font-headline);
+  font-size: var(--headline-size);
+  font-weight: 600;
+  letter-spacing: var(--heading-tracking);
+  line-height: 1.2;
+  color: var(--on-surface);
+  margin: 0;
+}
+
+/* Cards */
+.figure-card {
+  background: var(--surface-container-low);
+  border: var(--card-border);
+  border-radius: var(--rounded-lg);
+  padding: var(--space-lg);
+}
+.aside-box {
+  background: var(--surface-container);
+  border-top: var(--section-rule);
+  border-radius: var(--rounded);
+  padding: var(--space-lg);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  min-height: 44px;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--rounded);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background-color var(--dur-micro) var(--ease-out), color var(--dur-micro) var(--ease-out), box-shadow var(--dur-micro) var(--ease-out);
+  text-decoration: none;
+  line-height: 1.2;
+}
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.btn-primary {
+  background: var(--primary);
+  color: var(--on-primary);
+}
+.btn-primary:hover:not(:disabled) {
+  background: var(--secondary);
+}
+.btn-secondary {
+  background: var(--surface-container-low);
+  color: var(--on-surface);
+  border-color: var(--outline-button);
+}
+.btn-secondary:hover:not(:disabled) {
+  background: var(--surface-container);
+}
+.btn-accent {
+  background: var(--primary-container);
+  color: var(--on-primary-container);
+  border-color: var(--outline);
+}
+.btn-accent:hover:not(:disabled) {
+  background: var(--surface-container-high);
+}
+.btn-danger {
+  background: var(--error);
+  color: var(--on-error);
+}
+.btn-danger:hover:not(:disabled) {
+  opacity: 0.92;
+}
+.btn-sm {
+  min-height: 38px;
+  padding: var(--space-xs) var(--space-md);
+  font-size: 0.875rem;
+}
+
+/* Forms */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+.form-label {
+  font-family: var(--font-label);
+  font-size: var(--label-size);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--on-surface);
+}
+.form-input, .form-select, .form-textarea {
+  width: 100%;
+  min-height: 44px;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--surface-container-low);
+  color: var(--on-surface);
+  border: 1px solid var(--outline-button);
+  border-radius: var(--rounded);
+  transition: box-shadow var(--dur-micro) var(--ease-out), border-color var(--dur-micro) var(--ease-out);
+}
+.form-select {
+  padding-right: var(--space-xl);
+}
+.form-textarea {
+  min-height: 150px;
+  line-height: 1.6;
+  resize: vertical;
+}
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 2px var(--secondary-soft);
+  outline: none;
+}
+.form-error {
+  color: var(--error);
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-top: var(--space-xs);
+}
+.form-success {
+  color: var(--positive);
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-top: var(--space-xs);
+}
+
+/* Screen switching */
+.screen { display: none; }
+.screen.active { display: block; animation: fadeIn var(--dur-short) var(--ease-out); }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Identity Screen Layout */
+.identity-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: var(--space-lg);
+  align-items: start;
+}
+.kpi-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+.kpi-mini {
+  background: var(--surface-container-low);
+  border: var(--card-border);
+  border-radius: var(--rounded);
+  padding: var(--space-sm) var(--space-md);
+}
+.kpi-mini-label {
+  font-family: var(--font-label);
+  font-size: var(--label-size);
+  color: var(--on-surface-variant);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.kpi-mini-val {
+  font-family: var(--font-headline);
+  font-size: 1.35rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--on-surface);
+}
+.rule-list {
+  margin: var(--space-sm) 0 0 0;
+  padding-left: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+.rule-list li {
+  color: var(--on-surface);
+  font-size: 0.9375rem;
+}
+
+/* Exam HUD Bar */
+.exam-hud {
+  background: var(--surface-container-low);
+  border: var(--card-border);
+  border-top: 3px solid var(--primary);
+  border-radius: var(--rounded-lg);
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+.hud-identity {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+.hud-student-name {
+  font-family: var(--font-headline);
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: var(--on-surface);
+}
+.hud-student-meta {
+  font-family: var(--font-label);
+  font-size: var(--label-size);
+  color: var(--secondary);
+  text-transform: uppercase;
+}
+.hud-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-md);
+}
+.timer-box {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-xs) var(--space-md);
+  background: var(--surface-container);
+  border: var(--card-border);
+  border-radius: var(--rounded);
+}
+.timer-box.warning {
+  background: var(--warning-soft);
+  border-color: var(--warning);
+  color: var(--warning);
+}
+.timer-box.urgent {
+  background: var(--error-soft);
+  border-color: var(--error);
+  color: var(--error);
+}
+.timer-value {
+  font-family: var(--font-label);
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.violation-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--rounded);
+  font-family: var(--font-label);
+  font-size: var(--label-size);
+  font-weight: 600;
+  background: var(--positive-soft);
+  color: var(--positive);
+  border: 1px solid var(--outline-variant);
+}
+.violation-badge.flagged {
+  background: var(--error-soft);
+  color: var(--error);
+  border-color: var(--error);
+}
+
+/* Alert Banners */
+.alert-banner {
+  display: none;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--rounded-lg);
+  margin-bottom: var(--space-md);
+  border: 1.5px solid var(--error);
+  background: var(--error-soft);
+  color: var(--error);
+}
+.alert-banner.visible { display: flex; }
+.alert-banner.info-warn {
+  border-color: var(--warning);
+  background: var(--warning-soft);
+  color: var(--warning);
+}
+.confirm-panel {
+  display: none;
+  background: var(--surface-container);
+  border: 1.5px solid var(--outline);
+  border-radius: var(--rounded-lg);
+  padding: var(--space-md) var(--space-lg);
+  margin-bottom: var(--space-md);
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+.confirm-panel.visible { display: flex; }
+
+/* Exam Two-Column Workspace */
+.exam-workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 290px;
+  gap: var(--space-lg);
+  align-items: start;
+}
+
+/* Question Card */
+.question-card {
+  background: var(--surface-container-low);
+  border: var(--card-border);
+  border-radius: var(--rounded-lg);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-md);
+}
+.q-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--outline-variant);
+  margin-bottom: var(--space-md);
+}
+.q-header-left {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-sm);
+}
+.q-number {
+  font-family: var(--font-label);
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--on-primary);
+  background: var(--primary);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--badge-radius);
+}
+.q-topic {
+  font-family: var(--font-label);
+  font-size: var(--label-size);
+  color: var(--secondary);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.tag-chip {
+  font-family: var(--font-label);
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.15rem 0.45rem;
+  border-radius: var(--badge-radius);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.tag-hots { background: var(--tag-bg); color: var(--tertiary); }
+.tag-mots { background: var(--secondary-soft); color: var(--secondary); }
+.tag-lots { background: var(--surface-container); color: var(--on-surface-variant); }
+
+.stimulus-box {
+  background: var(--background);
+  border: var(--card-border);
+  border-left: 3px solid var(--secondary);
+  border-radius: var(--rounded);
+  padding: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+.stimulus-caption {
+  font-family: var(--font-label);
+  font-size: var(--label-size);
+  text-transform: uppercase;
+  color: var(--secondary);
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+}
+.stimulus-text {
+  font-size: 0.9375rem;
+  color: var(--on-surface);
+  margin: 0;
+  max-width: 68ch;
+}
+.visual-container {
+  margin-top: var(--space-sm);
+  background: var(--surface-container-low);
+  border: var(--card-border);
+  border-radius: var(--rounded);
+  padding: var(--space-md);
+  overflow-x: auto;
+}
+.visual-container svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 560px;
+}
+
+/* Data Tables in Questions */
+.briefing-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  background: var(--surface-container-low);
+}
+.briefing-table th {
+  font-family: var(--font-label);
+  font-size: var(--label-size);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: left;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--surface-container);
+  border-bottom: var(--section-rule);
+  color: var(--on-surface);
+}
+.briefing-table td {
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 1px solid var(--outline-variant);
+  color: var(--on-surface);
+}
+.briefing-table .num {
+  font-family: var(--font-label);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+.briefing-table tr.total-row td {
+  font-weight: 700;
+  border-top: 1.5px solid var(--outline);
+  background: var(--surface-container);
+}
+
+.q-prompt {
+  font-size: 1.03rem;
+  font-weight: 600;
+  color: var(--on-surface);
+  margin: 0 0 var(--space-md) 0;
+  max-width: 68ch;
+  line-height: 1.55;
+}
+
+/* Options List */
+.options-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+.option-btn {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  width: 100%;
+  min-height: 48px;
+  text-align: left;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--surface-container-low);
+  border: 1px solid var(--outline-button);
+  border-radius: var(--rounded);
+  color: var(--on-surface);
+  cursor: pointer;
+  transition: background-color var(--dur-micro) var(--ease-out), box-shadow var(--dur-micro) var(--ease-out);
+}
+.option-btn:hover {
+  background: var(--surface-container);
+}
+.option-btn.selected {
+  background: var(--secondary-soft);
+  border-color: var(--secondary);
+  box-shadow: inset 3px 0 0 var(--secondary);
+}
+.option-key {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-label);
+  font-weight: 600;
+  font-size: 0.8125rem;
+  border-radius: var(--badge-radius);
+  background: var(--surface-container);
+  color: var(--on-surface);
+  margin-top: 1px;
+}
+.option-btn.selected .option-key {
+  background: var(--secondary);
+  color: var(--on-primary);
+}
+.option-text {
+  line-height: 1.5;
+  padding-top: 2px;
+}
+
+/* Essay Box */
+.essay-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--space-xs);
+  font-family: var(--font-label);
+  font-size: var(--label-size);
+  color: var(--on-surface-variant);
+}
+
+/* Question Navigation Footer */
+.q-nav-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--outline-variant);
+}
+
+/* Navigator Sidebar */
+.nav-sidebar {
+  background: var(--surface-container-low);
+  border: var(--card-border);
+  border-radius: var(--rounded-lg);
+  padding: var(--space-md);
+}
+.nav-section-title {
+  font-family: var(--font-label);
+  font-size: var(--label-size);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--secondary);
+  margin: var(--space-sm) 0 var(--space-xs) 0;
+}
+.nav-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--space-xs);
+  margin-bottom: var(--space-md);
+}
+.nav-num-btn {
+  min-height: 36px;
+  min-width: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-label);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  border-radius: var(--badge-radius);
+  border: 1px solid var(--outline-button);
+  background: var(--surface-container-low);
+  color: var(--on-surface);
+  cursor: pointer;
+  transition: background-color var(--dur-micro) var(--ease-out);
+}
+.nav-num-btn:hover { background: var(--surface-container); }
+.nav-num-btn.answered {
+  background: var(--positive-soft);
+  border-color: var(--positive);
+  color: var(--positive);
+}
+.nav-num-btn.flagged {
+  background: var(--primary-container);
+  border-color: var(--outline);
+  color: var(--on-primary-container);
+}
+.nav-num-btn.current {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--on-primary);
+  box-shadow: 0 0 0 2px var(--secondary-soft);
+}
+.nav-legend {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-xs);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--outline-variant);
+  font-size: 0.75rem;
+  color: var(--on-surface-variant);
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+.legend-swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  border: 1px solid var(--outline-button);
+  display: inline-block;
+}
+.swatch-current { background: var(--primary); border-color: var(--primary); }
+.swatch-answered { background: var(--positive-soft); border-color: var(--positive); }
+.swatch-flagged { background: var(--primary-container); border-color: var(--outline); }
+.swatch-empty { background: var(--surface-container-low); }
+
+/* Result Screen */
+.result-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+.result-kpi-value {
+  font-family: var(--font-headline);
+  font-size: 2rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--on-surface);
+  margin: var(--space-xs) 0;
+}
+.result-kpi-sub {
+  font-size: 0.875rem;
+  color: var(--on-surface-variant);
+}
+.summary-copy-box {
+  background: var(--background);
+  border: var(--card-border);
+  border-radius: var(--rounded);
+  padding: var(--space-md);
+  font-family: var(--font-label);
+  font-size: 0.8125rem;
+  white-space: pre-wrap;
+  line-height: 1.5;
+  color: var(--on-surface);
+  max-height: 260px;
+  overflow-y: auto;
+}
+.action-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+/* Password Gate & Review */
+.lock-gate {
+  background: var(--surface-container);
+  border-top: var(--section-rule);
+  border-radius: var(--rounded-lg);
+  padding: var(--space-lg);
+  margin-top: var(--space-lg);
+}
+.lock-form-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+  max-width: 480px;
+}
+.lock-form-row .form-group { flex: 1 1 220px; }
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin: var(--space-md) 0;
+}
+.filter-chip {
+  min-height: 36px;
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--rounded);
+  border: 1px solid var(--outline-button);
+  background: var(--surface-container-low);
+  color: var(--on-surface);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.filter-chip.active {
+  background: var(--primary);
+  color: var(--on-primary);
+  border-color: var(--primary);
+}
+.review-item {
+  background: var(--surface-container-low);
+  border: var(--card-border);
+  border-radius: var(--rounded-lg);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-md);
+}
+.review-item.correct { border-left: 4px solid var(--positive); }
+.review-item.wrong { border-left: 4px solid var(--error); }
+.review-item.essay { border-left: 4px solid var(--secondary); }
+.explanation-box {
+  background: var(--surface-container);
+  border-radius: var(--rounded);
+  padding: var(--space-md);
+  margin-top: var(--space-md);
+  font-size: 0.9375rem;
+}
+.answer-compare-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+.compare-cell {
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--rounded);
+  border: var(--card-border);
+  background: var(--background);
+}
+
+/* Utility */
+.hidden { display: none !important; }
+.mt-sm { margin-top: var(--space-sm); }
+.mt-md { margin-top: var(--space-md); }
+.mb-md { margin-bottom: var(--space-md); }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .identity-grid,
+  .exam-workspace {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .page-grid {
+    padding: var(--space-sm);
+    gap: var(--space-md);
+  }
+  .figure-card, .question-card, .review-item, .aside-box {
+    padding: var(--space-md);
+  }
+  .kpi-mini-grid {
+    grid-template-columns: 1fr;
+  }
+  .exam-hud {
+    padding: var(--space-md);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style>
+</head>
+<body>
+<div class="page-grid">
+
+  <!-- HEADER -->
+  <header>
+    <div class="dossier-bar">
+      <div class="dossier-bar-left">
+        <span class="dossier-pill">Asesmen HOTS Ekonomi</span>
+        <span class="dossier-meta">Kelas XII • Semester Ganjil • 40 Soal (35 PG + 5 Uraian) • 60 Menit</span>
+      </div>
+      <span class="dossier-meta" id="header-status-label">Tahap: Registrasi Peserta</span>
+    </div>
+    <h1 class="title">Evaluasi Akhir Semester: Ekonomi Makro &amp; Internasional</h1>
+    <p class="standfirst">Instrumen asesmen interaktif berbasis kisi-kisi HOTS (C4–C6) dan MOTS (C3) mencakup pertumbuhan ekonomi, ketenagakerjaan, APBN/APBD, kebijakan moneter, serta neraca pembayaran global.</p>
+  </header>
+
+  <main>
+    <!-- SCREEN 1: LAYAR IDENTITAS -->
+    <section id="screen-identity" class="screen active" aria-labelledby="identity-heading">
+      <div class="identity-grid">
+        <div class="figure-card">
+          <div class="dossier-bar">
+            <span class="dossier-pill">01 • Identitas Peserta</span>
+            <span class="dossier-meta">Wajib Diisi Sebelum Memulai</span>
+          </div>
+          <h2 id="identity-heading" class="section-heading">Data Peserta Ujian</h2>
+          <p class="mt-sm" style="color: var(--on-surface-variant);">Masukkan nama lengkap dan kelas Anda secara akurat. Identitas ini akan dicatat pada ringkasan nilai akhir yang dikirimkan kepada guru mata pelajaran.</p>
+
+          <form id="identity-form" onsubmit="handleStartQuiz(event)" novalidate>
+            <div class="form-group mt-md">
+              <label for="input-name" class="form-label">Nama Lengkap Siswa</label>
+              <input id="input-name" class="form-input" type="text" autocomplete="name" placeholder="Contoh: Maria Yosefina Simbolon" required>
+            </div>
+
+            <div class="form-group mt-md">
+              <label for="input-class" class="form-label">Kelas / Rombongan Belajar</label>
+              <select id="input-class" class="form-select" onchange="handleClassSelectChange(this.value)">
+                <option value="">-- Pilih Kelas --</option>
+                <option value="XII.2">XII.2</option>
+                <option value="XII.4">XII.4</option>
+                <option value="XII.5">XII.5</option>
+                <option value="XII.6">XII.6</option>
+                <option value="Lainnya">Kelas XII Lainnya (Ketik Manual)</option>
+              </select>
+            </div>
+
+            <div id="custom-class-wrap" class="form-group mt-sm hidden">
+              <label for="input-custom-class" class="form-label">Tuliskan Nama Kelas</label>
+              <input id="input-custom-class" class="form-input" type="text" placeholder="Contoh: XII IPS 1">
+            </div>
+
+            <div id="identity-error" class="form-error hidden" role="alert"></div>
+
+            <div id="resume-notice" class="aside-box mt-md hidden">
+              <strong style="display: block;">Sesi Ujian Tersimpan Ditemukan</strong>
+              <p id="resume-notice-text" class="mt-sm" style="margin-bottom: var(--space-sm); font-size: 0.9375rem;"></p>
+              <div class="action-row" style="margin-top: 0;">
+                <button type="button" class="btn btn-primary btn-sm" onclick="resumeSavedExam()">Lanjutkan Sesi Tersimpan</button>
+                <button type="button" class="btn btn-secondary btn-sm" onclick="discardSavedExam(this)">Hapus &amp; Mulai Baru</button>
+              </div>
+            </div>
+
+            <div class="action-row mt-md">
+              <button type="submit" class="btn btn-primary">Mulai Ujian Sekarang (60 Menit)</button>
+            </div>
+          </form>
+        </div>
+
+        <aside class="aside-box" aria-label="Ketentuan dan Pengawasan Ujian">
+          <div class="dossier-bar">
+            <span class="dossier-pill">02 • Tata Tertib &amp; Spesifikasi</span>
+          </div>
+          <div class="kpi-mini-grid">
+            <div class="kpi-mini">
+              <div class="kpi-mini-label">Total Butir</div>
+              <div class="kpi-mini-val">40 Soal</div>
+            </div>
+            <div class="kpi-mini">
+              <div class="kpi-mini-label">Batas Waktu</div>
+              <div class="kpi-mini-val">60 Menit</div>
+            </div>
+            <div class="kpi-mini">
+              <div class="kpi-mini-label">Pilihan Ganda</div>
+              <div class="kpi-mini-val">35 Butir (A–E)</div>
+            </div>
+            <div class="kpi-mini">
+              <div class="kpi-mini-label">Uraian Analisis</div>
+              <div class="kpi-mini-val">5 Butir HOTS</div>
+            </div>
+          </div>
+
+          <strong style="font-size: 0.9375rem;">Sistem Pengawasan Aktif (Anti-Cheating)</strong>
+          <ul class="rule-list">
+            <li><strong>Deteksi Berpindah Tab:</strong> Peramban memantau perubahan fokus jendela. Meninggalkan halaman kuis akan membunyikan bel peringatan audio dan menambah hitungan pelanggaran.</li>
+            <li><strong>Auto-Submit Otomatis:</strong> Apabila hitung mundur 60 menit mencapai 00:00, seluruh jawaban Anda akan dikumpulkan secara otomatis.</li>
+            <li><strong>Kunci &amp; Pembahasan Terproteksi:</strong> Pembahasan 40 soal dan kunci jawaban di akhir ujian hanya dapat dibuka dengan kode akses dari guru.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SCREEN 2: RUANG UJIAN AKTIF -->
+    <section id="screen-exam" class="screen" aria-label="Ruang Pengerjaan Kuis">
+      <div class="exam-hud">
+        <div class="hud-identity">
+          <div class="hud-student-name" id="hud-name">Nama Peserta</div>
+          <div class="hud-student-meta" id="hud-class">Kelas • Terjawab 0/40</div>
+        </div>
+        <div class="hud-metrics">
+          <div id="timer-box" class="timer-box" role="timer" aria-live="off">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <span id="timer-display" class="timer-value">60:00</span>
+          </div>
+          <div id="violation-badge" class="violation-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <span id="violation-count-text">Pelanggaran: 0</span>
+          </div>
+          <button type="button" class="btn btn-secondary btn-sm" id="view-mode-btn" onclick="toggleViewMode()">Lihat Semua Soal</button>
+          <button type="button" class="btn btn-primary btn-sm" onclick="openSubmitConfirm()">Kumpulkan Ujian</button>
+        </div>
+      </div>
+
+      <!-- Anti-Cheating Alert Banner -->
+      <div id="violation-banner" class="alert-banner" role="alert">
+        <div>
+          <strong id="violation-banner-title">Peringatan Pengawasan: Anda Terdeteksi Keluar dari Halaman Ujian</strong>
+          <div id="violation-banner-desc" style="font-size: 0.9rem; margin-top: var(--space-xs);">Aktivitas meninggalkan tab atau jendela ujian dicatat secara otomatis ke laporan hasil akhir.</div>
+        </div>
+        <button type="button" class="btn btn-secondary btn-sm" onclick="dismissViolationBanner()">Tutup Peringatan</button>
+      </div>
+
+      <!-- Time Warning Banner -->
+      <div id="time-warning-banner" class="alert-banner info-warn" role="status">
+        <div>
+          <strong id="time-warning-title">Perhatian Sisa Waktu</strong>
+          <div id="time-warning-desc" style="font-size: 0.9rem; margin-top: var(--space-xs);"></div>
+        </div>
+        <button type="button" class="btn btn-secondary btn-sm" onclick="dismissTimeWarning()">Mengerti</button>
+      </div>
+
+      <!-- Two-Step Submit Confirmation -->
+      <div id="submit-confirm-panel" class="confirm-panel" role="region" aria-label="Konfirmasi Pengumpulan Ujian">
+        <div>
+          <strong>Konfirmasi Pengumpulan Jawaban</strong>
+          <div id="submit-confirm-summary" style="font-size: 0.9375rem; color: var(--on-surface-variant); margin-top: var(--space-xs);"></div>
+        </div>
+        <div class="action-row" style="margin-top: 0;">
+          <button type="button" class="btn btn-secondary btn-sm" onclick="closeSubmitConfirm()">Kembali Periksa</button>
+          <button type="button" class="btn btn-primary btn-sm" onclick="finalizeExam('manual')">Ya, Kumpulkan Sekarang</button>
+        </div>
+      </div>
+
+      <div class="exam-workspace">
+        <div id="question-stage">
+          <!-- Rendered dynamically by JS -->
+        </div>
+
+        <aside class="nav-sidebar" aria-label="Navigasi Nomor Soal">
+          <div class="dossier-bar" style="margin-bottom: var(--space-sm);">
+            <span class="dossier-pill">Navigasi Soal</span>
+            <span class="dossier-meta" id="nav-progress-pct">0%</span>
+          </div>
+
+          <div class="nav-section-title">Pilihan Ganda (1–35)</div>
+          <div id="nav-grid-pg" class="nav-grid"></div>
+
+          <div class="nav-section-title">Uraian HOTS (36–40)</div>
+          <div id="nav-grid-essay" class="nav-grid"></div>
+
+          <div class="nav-legend">
+            <div class="legend-item"><span class="legend-swatch swatch-current"></span> Aktif</div>
+            <div class="legend-item"><span class="legend-swatch swatch-answered"></span> Terjawab</div>
+            <div class="legend-item"><span class="legend-swatch swatch-flagged"></span> Ragu-ragu</div>
+            <div class="legend-item"><span class="legend-swatch swatch-empty"></span> Kosong</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SCREEN 3: HASIL & PEMBAHASAN TERKUNCI -->
+    <section id="screen-result" class="screen" aria-label="Laporan Hasil Asesmen">
+      <div class="figure-card mb-md">
+        <div class="dossier-bar">
+          <div class="dossier-bar-left">
+            <span class="dossier-pill">Laporan Akhir Sesi</span>
+            <span class="dossier-meta" id="result-submit-meta">Dikumpulkan</span>
+          </div>
+          <span class="dossier-meta" id="result-student-badge"></span>
+        </div>
+
+        <h2 class="section-heading" id="result-headline">Ringkasan Evaluasi Peserta</h2>
+        <p class="mt-sm" style="color: var(--on-surface-variant);" id="result-subtitle"></p>
+
+        <div class="result-kpi-grid mt-md">
+          <div class="figure-card" style="background: var(--background);">
+            <div class="kpi-mini-label">Skor Total (Bobot 100)</div>
+            <div class="result-kpi-value" id="kpi-total-score">0</div>
+            <div class="result-kpi-sub" id="kpi-total-sub">70% PG + 30% Estimasi Uraian</div>
+          </div>
+          <div class="figure-card" style="background: var(--background);">
+            <div class="kpi-mini-label">Nilai Pilihan Ganda</div>
+            <div class="result-kpi-value" id="kpi-pg-score">0 / 35</div>
+            <div class="result-kpi-sub" id="kpi-pg-sub">0 Poin (Maks 70)</div>
+          </div>
+          <div class="figure-card" style="background: var(--background);">
+            <div class="kpi-mini-label">Estimasi Nilai Uraian</div>
+            <div class="result-kpi-value" id="kpi-essay-score">0 / 30</div>
+            <div class="result-kpi-sub" id="kpi-essay-sub">Skoring kata kunci (menunggu verifikasi guru)</div>
+          </div>
+          <div class="figure-card" style="background: var(--background);">
+            <div class="kpi-mini-label">Pelanggaran Keluar Tab</div>
+            <div class="result-kpi-value" id="kpi-violations">0 Kali</div>
+            <div class="result-kpi-sub" id="kpi-violations-sub">Integritas terjaga</div>
+          </div>
+        </div>
+
+        <div id="violation-log-box" class="aside-box mb-md hidden">
+          <strong>Catatan Waktu Pelanggaran Pengawasan:</strong>
+          <ul id="violation-log-list" class="rule-list"></ul>
+        </div>
+
+        <div class="form-group">
+          <label for="copy-summary-preview" class="form-label">Format Teks Laporan untuk Dikirim ke Guru</label>
+          <pre id="copy-summary-preview" class="summary-copy-box" tabindex="0"></pre>
+        </div>
+
+        <div class="action-row">
+          <button type="button" class="btn btn-primary" onclick="copyReportSummary()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            Salin Ringkasan Nilai
+          </button>
+          <button type="button" class="btn btn-secondary" onclick="downloadReportText()">Unduh Laporan (.txt)</button>
+          <button type="button" class="btn btn-secondary" onclick="restartExam(this)">Ulangi Ujian Baru</button>
+        </div>
+        <div id="copy-feedback" class="form-success hidden" role="status"></div>
+      </div>
+
+      <!-- PASSWORD LOCKED REVIEW SECTION -->
+      <div id="review-locked-gate" class="lock-gate">
+        <div class="dossier-bar">
+          <span class="dossier-pill">Kunci Jawaban &amp; Pembahasan Terkunci</span>
+          <span class="dossier-meta">Akses Terproteksi Kata Sandi</span>
+        </div>
+        <h3 class="section-heading">Buka Kunci Jawaban &amp; Pembahasan 40 Soal</h3>
+        <p class="mt-sm" style="color: var(--on-surface-variant); max-width: 65ch;">Pembahasan analitis HOTS/MOTS dan rubrik penilaian uraian disembunyikan selama asesmen berlangsung. Masukkan kode akses dari guru mata pelajaran untuk meninjau hasil per butir soal.</p>
+
+        <form onsubmit="handleUnlockReview(event)" class="lock-form-row" novalidate>
+          <div class="form-group">
+            <label for="input-password" class="form-label">Kode Akses Pembahasan</label>
+            <input id="input-password" class="form-input" type="password" autocomplete="off" placeholder="Masukkan kode akses">
+          </div>
+          <button type="submit" class="btn btn-accent">Buka Pembahasan</button>
+        </form>
+        <div id="password-error" class="form-error hidden" role="alert"></div>
+      </div>
+
+      <div id="review-unlocked-panel" class="hidden">
+        <div class="figure-card">
+          <div class="dossier-bar">
+            <span class="dossier-pill">Pembahasan Terbuka</span>
+            <span class="dossier-meta">40 Butir Soal &amp; Rubrik Penilaian</span>
+          </div>
+          <h3 class="section-heading">Analisis Kunci Jawaban &amp; Pembahasan Lengkap</h3>
+          <div class="filter-bar" role="group" aria-label="Filter Pembahasan Soal">
+            <button type="button" class="filter-chip active" data-filter="all" onclick="setReviewFilter('all', this)">Semua Soal (40)</button>
+            <button type="button" class="filter-chip" data-filter="wrong" onclick="setReviewFilter('wrong', this)">PG Salah</button>
+            <button type="button" class="filter-chip" data-filter="correct" onclick="setReviewFilter('correct', this)">PG Benar</button>
+            <button type="button" class="filter-chip" data-filter="essay" onclick="setReviewFilter('essay', this)">Uraian (5)</button>
+            <button type="button" class="filter-chip" data-filter="hots" onclick="setReviewFilter('hots', this)">Fokus HOTS (L3)</button>
+          </div>
+          <div id="review-list"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="border-top: 1px solid var(--outline-variant); padding-top: var(--space-md); margin-top: var(--space-lg); font-size: 0.8125rem; color: var(--on-surface-variant);">
+    Disusun berdasarkan Kisi-Kisi Soal HOTS Ekonomi Kelas XII Semester Ganjil 2026/2027 (35 Pilihan Ganda &amp; 5 Uraian • Kurikulum Merdeka / K13 Revisi).
+  </footer>
+</div>
+
+<api-shim></api-shim>
+
+<script>
+(function () {
+  'use strict';
+})();
+
+var TOTAL_DURATION_SEC = 3600; // 60 Menit
+var ACCESS_CODE = `ILOVEYOU`;
+
+var VISUALS = {
+  pdbNegaraY: `<div class="visual-container">
+    <svg viewBox="0 0 520 220" role="img" aria-label="Grafik Perbandingan PDB Riil Negara Y Tahun 2024 dan 2025">
+      <text x="16" y="24" font-family="Source Serif 4, serif" font-size="15" font-weight="600" fill="var(--on-surface)">PDB Riil Negara Y (dalam Miliar Rupiah)</text>
+      <line x1="64" y1="172" x2="490" y2="172" stroke="var(--outline)" stroke-width="1.5" />
+      <line x1="64" y1="130" x2="490" y2="130" stroke="var(--outline-variant)" stroke-width="1" stroke-dasharray="3,3" />
+      <line x1="64" y1="88" x2="490" y2="88" stroke="var(--outline-variant)" stroke-width="1" stroke-dasharray="3,3" />
+      <line x1="64" y1="46" x2="490" y2="46" stroke="var(--outline-variant)" stroke-width="1" stroke-dasharray="3,3" />
+      <text x="56" y="176" text-anchor="end" font-family="Geist Mono, monospace" font-size="11" fill="var(--on-surface-variant)">0</text>
+      <text x="56" y="134" text-anchor="end" font-family="Geist Mono, monospace" font-size="11" fill="var(--on-surface-variant)">5.000</text>
+      <text x="56" y="92" text-anchor="end" font-family="Geist Mono, monospace" font-size="11" fill="var(--on-surface-variant)">10.000</text>
+      <text x="56" y="50" text-anchor="end" font-family="Geist Mono, monospace" font-size="11" fill="var(--on-surface-variant)">15.000</text>
+      <rect x="130" y="67" width="90" height="105" rx="2" fill="var(--data-context)" />
+      <text x="175" y="59" text-anchor="middle" font-family="Geist Mono, monospace" font-size="12" font-weight="600" fill="var(--on-surface)">Rp12.500 M</text>
+      <text x="175" y="192" text-anchor="middle" font-family="Geist Mono, monospace" font-size="12" fill="var(--on-surface)">Tahun 2024</text>
+      <rect x="300" y="60.7" width="90" height="111.3" rx="2" fill="var(--data-1)" />
+      <text x="345" y="52.7" text-anchor="middle" font-family="Geist Mono, monospace" font-size="12" font-weight="600" fill="var(--data-1)">Rp13.250 M</text>
+      <text x="345" y="192" text-anchor="middle" font-family="Geist Mono, monospace" font-size="12" fill="var(--on-surface)">Tahun 2025</text>
+      <path d="M 225 65 Q 260 40 295 57" fill="none" stroke="var(--data-2)" stroke-width="2" />
+      <text x="260" y="38" text-anchor="middle" font-family="Geist Mono, monospace" font-size="11" font-weight="600" fill="var(--tertiary)">+Rp750 M (?%)</text>
+    </svg>
+  </div>`,
+
+  kinerjaRI2026: `<div class="visual-container">
+    <svg viewBox="0 0 540 215" role="img" aria-label="Grafik Tren Pertumbuhan Ekonomi RI Triwulan I 2025 hingga Triwulan III 2026">
+      <text x="16" y="22" font-family="Source Serif 4, serif" font-size="15" font-weight="600" fill="var(--on-surface)">Tren Laju Pertumbuhan Ekonomi RI (% yoy)</text>
+      <line x1="48" y1="165" x2="510" y2="165" stroke="var(--outline)" stroke-width="1.5" />
+      <line x1="48" y1="120" x2="510" y2="120" stroke="var(--outline-variant)" stroke-width="1" stroke-dasharray="3,3" />
+      <line x1="48" y1="75" x2="510" y2="75" stroke="var(--outline-variant)" stroke-width="1" stroke-dasharray="3,3" />
+      <text x="42" y="169" text-anchor="end" font-family="Geist Mono, monospace" font-size="10" fill="var(--on-surface-variant)">4,0%</text>
+      <text x="42" y="124" text-anchor="end" font-family="Geist Mono, monospace" font-size="10" fill="var(--on-surface-variant)">5,0%</text>
+      <text x="42" y="79" text-anchor="end" font-family="Geist Mono, monospace" font-size="10" fill="var(--on-surface-variant)">6,0%</text>
+      <polyline points="80,118 150,113 220,121 290,110 360,106 430,103 485,98.8" fill="none" stroke="var(--data-1)" stroke-width="2.5" />
+      <circle cx="80" cy="118" r="4" fill="var(--data-1)" />
+      <circle cx="150" cy="113" r="4" fill="var(--data-1)" />
+      <circle cx="220" cy="121" r="4" fill="var(--data-1)" />
+      <circle cx="290" cy="110" r="4" fill="var(--data-1)" />
+      <circle cx="360" cy="106" r="4" fill="var(--data-1)" />
+      <circle cx="430" cy="103" r="4" fill="var(--data-1)" />
+      <circle cx="485" cy="98.8" r="6" fill="var(--data-2)" stroke="var(--on-surface)" stroke-width="1.5" />
+      <text x="80" y="184" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" fill="var(--on-surface-variant)">TW1'25</text>
+      <text x="150" y="184" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" fill="var(--on-surface-variant)">TW2'25</text>
+      <text x="220" y="184" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" fill="var(--on-surface-variant)">TW3'25</text>
+      <text x="290" y="184" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" fill="var(--on-surface-variant)">TW4'25</text>
+      <text x="360" y="184" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" fill="var(--on-surface-variant)">TW1'26</text>
+      <text x="430" y="184" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" fill="var(--on-surface-variant)">TW2'26</text>
+      <text x="485" y="184" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" font-weight="600" fill="var(--on-surface)">TW3'26</text>
+      <text x="480" y="84" text-anchor="end" font-family="Geist Mono, monospace" font-size="12" font-weight="600" fill="var(--tertiary)">5,47%</text>
+    </svg>
+  </div>`,
+
+  iAccountAPBN: `<div class="visual-container">
+    <svg viewBox="0 0 540 250" role="img" aria-label="Diagram Alur Format I-Account APBN">
+      <text x="14" y="22" font-family="Source Serif 4, serif" font-size="15" font-weight="600" fill="var(--on-surface)">Struktur Ringkas Format I-Account APBN</text>
+      <rect x="20" y="38" width="230" height="48" rx="3" fill="var(--surface-container)" stroke="var(--outline-variant)" stroke-width="1.2" />
+      <text x="32" y="58" font-family="Geist Mono, monospace" font-size="10" fill="var(--secondary)">A. PENDAPATAN NEGARA</text>
+      <text x="32" y="76" font-family="Geist Mono, monospace" font-size="13" font-weight="600" fill="var(--on-surface)">Rp2.800,0 Triliun</text>
+      <rect x="290" y="38" width="230" height="48" rx="3" fill="var(--surface-container)" stroke="var(--outline-variant)" stroke-width="1.2" />
+      <text x="302" y="58" font-family="Geist Mono, monospace" font-size="10" fill="var(--data-4)">B. BELANJA NEGARA</text>
+      <text x="302" y="76" font-family="Geist Mono, monospace" font-size="13" font-weight="600" fill="var(--on-surface)">Rp3.350,0 Triliun</text>
+      <line x1="250" y1="62" x2="290" y2="62" stroke="var(--outline)" stroke-width="1.5" />
+      <text x="270" y="56" text-anchor="middle" font-family="Geist Mono, monospace" font-size="14" font-weight="600" fill="var(--on-surface)">−</text>
+      <line x1="270" y1="86" x2="270" y2="114" stroke="var(--outline)" stroke-width="1.5" />
+      <polygon points="265,112 275,112 270,120" fill="var(--outline)" />
+      <rect x="130" y="122" width="280" height="48" rx="3" fill="var(--error-soft)" stroke="var(--error)" stroke-width="1.5" />
+      <text x="270" y="142" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" font-weight="600" fill="var(--error)">C. SURPLUS / (DEFISIT) ANGGARAN (A − B)</text>
+      <text x="270" y="160" text-anchor="middle" font-family="Geist Mono, monospace" font-size="13" font-weight="600" fill="var(--error)">(Rp550,0 Triliun) — DEFISIT</text>
+      <line x1="270" y1="170" x2="270" y2="192" stroke="var(--outline)" stroke-width="1.5" />
+      <polygon points="265,190 275,190 270,198" fill="var(--outline)" />
+      <rect x="90" y="200" width="360" height="40" rx="3" fill="var(--tag-bg)" stroke="var(--outline)" stroke-width="1.5" />
+      <text x="270" y="224" text-anchor="middle" font-family="Geist Mono, monospace" font-size="12" font-weight="600" fill="var(--tertiary)">D. PEMBIAYAAN ANGGARAN: +Rp550,0 T (INSTRUMEN ?)</text>
+    </svg>
+  </div>`,
+
+  neracaDefisit18: `<div class="visual-container">
+    <svg viewBox="0 0 520 140" role="img" aria-label="Grafik Batang Ekspor US$85.000 M dan Impor US$92.000 M">
+      <text x="12" y="22" font-family="Source Serif 4, serif" font-size="14" font-weight="600" fill="var(--on-surface)">Perbandingan Nilai Ekspor dan Impor Barang (US$ Juta)</text>
+      <text x="12" y="62" font-family="Geist Mono, monospace" font-size="12" fill="var(--on-surface)">Ekspor (X)</text>
+      <rect x="115" y="44" width="297" height="26" rx="2" fill="var(--data-1)" />
+      <text x="420" y="62" font-family="Geist Mono, monospace" font-size="12" font-weight="600" fill="var(--data-1)">US$85.000 M</text>
+      <text x="12" y="106" font-family="Geist Mono, monospace" font-size="12" fill="var(--on-surface)">Impor (M)</text>
+      <rect x="115" y="88" width="322" height="26" rx="2" fill="var(--data-4)" />
+      <text x="445" y="106" font-family="Geist Mono, monospace" font-size="12" font-weight="600" fill="var(--data-4)">US$92.000 M</text>
+    </svg>
+  </div>`,
+
+  tabelAmanDamai: `<div class="visual-container">
+    <table class="briefing-table">
+      <thead>
+        <tr>
+          <th>Negara</th>
+          <th class="num">Nilai Ekspor (US$ M)</th>
+          <th class="num">Nilai Impor (US$ M)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Negara Aman</strong></td>
+          <td class="num">65.000</td>
+          <td class="num">78.000</td>
+        </tr>
+        <tr>
+          <td><strong>Negara Damai</strong></td>
+          <td class="num">94.000</td>
+          <td class="num">74.000</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>`,
+
+  tabelBOP29: `<div class="visual-container">
+    <table class="briefing-table">
+      <thead>
+        <tr>
+          <th>Komponen Neraca Pembayaran Negara Sejahtera</th>
+          <th class="num">Kredit (+)</th>
+          <th class="num">Debet (−)</th>
+          <th class="num">Saldo (US$ Miliar)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1. Neraca Perdagangan Barang</td>
+          <td class="num">+140</td>
+          <td class="num">−115</td>
+          <td class="num">+25</td>
+        </tr>
+        <tr>
+          <td>2. Neraca Jasa</td>
+          <td class="num">+18</td>
+          <td class="num">−32</td>
+          <td class="num">−14</td>
+        </tr>
+        <tr>
+          <td>3. Pendapatan Primer &amp; Sekunder Neto</td>
+          <td class="num">—</td>
+          <td class="num">—</td>
+          <td class="num">−8</td>
+        </tr>
+        <tr>
+          <td><strong>Total Transaksi Berjalan</strong></td>
+          <td class="num">—</td>
+          <td class="num">—</td>
+          <td class="num"><strong>+3</strong></td>
+        </tr>
+        <tr>
+          <td>4. Investasi Langsung Asing (FDI)</td>
+          <td class="num">+22</td>
+          <td class="num">0</td>
+          <td class="num">+22</td>
+        </tr>
+        <tr>
+          <td>5. Investasi Portofolio</td>
+          <td class="num">+5</td>
+          <td class="num">−12</td>
+          <td class="num">−7</td>
+        </tr>
+        <tr class="total-row">
+          <td>Saldo Keseluruhan Neraca Pembayaran</td>
+          <td class="num">—</td>
+          <td class="num">—</td>
+          <td class="num">+18</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>`,
+
+  negaraBahagia37: `<div class="visual-container">
+    <svg viewBox="0 0 520 195" role="img" aria-label="Grafik PDB Riil Negara Bahagia 2022 dan 2023">
+      <text x="16" y="22" font-family="Source Serif 4, serif" font-size="15" font-weight="600" fill="var(--on-surface)">PDB Riil Negara Bahagia (Triliun Rupiah)</text>
+      <line x1="60" y1="150" x2="480" y2="150" stroke="var(--outline)" stroke-width="1.5" />
+      <line x1="60" y1="100" x2="480" y2="100" stroke="var(--outline-variant)" stroke-width="1" stroke-dasharray="3,3" />
+      <line x1="60" y1="50" x2="480" y2="50" stroke="var(--outline-variant)" stroke-width="1" stroke-dasharray="3,3" />
+      <text x="52" y="154" text-anchor="end" font-family="Geist Mono, monospace" font-size="11" fill="var(--on-surface-variant)">0</text>
+      <text x="52" y="104" text-anchor="end" font-family="Geist Mono, monospace" font-size="11" fill="var(--on-surface-variant)">400 T</text>
+      <text x="52" y="54" text-anchor="end" font-family="Geist Mono, monospace" font-size="11" fill="var(--on-surface-variant)">800 T</text>
+      <rect x="130" y="75" width="90" height="75" rx="2" fill="var(--data-context)" />
+      <text x="175" y="67" text-anchor="middle" font-family="Geist Mono, monospace" font-size="12" font-weight="600" fill="var(--on-surface)">Rp600 T</text>
+      <text x="175" y="170" text-anchor="middle" font-family="Geist Mono, monospace" font-size="12" fill="var(--on-surface)">Tahun 2022</text>
+      <rect x="300" y="62.5" width="90" height="87.5" rx="2" fill="var(--data-3)" />
+      <text x="345" y="54.5" text-anchor="middle" font-family="Geist Mono, monospace" font-size="12" font-weight="600" fill="var(--data-3)">Rp700 T</text>
+      <text x="345" y="170" text-anchor="middle" font-family="Geist Mono, monospace" font-size="12" fill="var(--on-surface)">Tahun 2023</text>
+    </svg>
+  </div>`,
+
+  coreReactor38: `<div class="visual-container">
+    <svg viewBox="0 0 540 165" role="img" aria-label="Skema APBN sebagai Core Reactor Perekonomian">
+      <text x="14" y="20" font-family="Source Serif 4, serif" font-size="14" font-weight="600" fill="var(--on-surface)">Mekanisme Injeksi APBN (Core Reactor Perekonomian)</text>
+      <rect x="16" y="48" width="128" height="70" rx="3" fill="var(--primary)" />
+      <text x="80" y="78" text-anchor="middle" font-family="Geist Mono, monospace" font-size="11" font-weight="600" fill="var(--primary-container)">CORE REACTOR</text>
+      <text x="80" y="96" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="600" fill="var(--on-primary)">APBN Fiskal</text>
+      <line x1="144" y1="68" x2="188" y2="54" stroke="var(--outline)" stroke-width="1.5" />
+      <line x1="144" y1="100" x2="188" y2="116" stroke="var(--outline)" stroke-width="1.5" />
+      <rect x="190" y="34" width="160" height="44" rx="3" fill="var(--tag-bg)" stroke="var(--outline-variant)" stroke-width="1.2" />
+      <text x="270" y="53" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="600" fill="var(--tertiary)">Injeksi Belanja Subsidi</text>
+      <text x="270" y="69" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" fill="var(--on-surface-variant)">Daya Beli &amp; Konsumsi</text>
+      <rect x="190" y="94" width="160" height="44" rx="3" fill="var(--secondary-soft)" stroke="var(--secondary)" stroke-width="1.2" />
+      <text x="270" y="113" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="600" fill="var(--secondary)">Belanja Modal / Proyek</text>
+      <text x="270" y="129" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" fill="var(--on-surface-variant)">Infrastruktur &amp; Kapasitas</text>
+      <line x1="350" y1="56" x2="394" y2="74" stroke="var(--outline)" stroke-width="1.5" />
+      <line x1="350" y1="116" x2="394" y2="96" stroke="var(--outline)" stroke-width="1.5" />
+      <rect x="396" y="48" width="128" height="70" rx="3" fill="var(--positive-soft)" stroke="var(--positive)" stroke-width="1.5" />
+      <text x="460" y="77" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="var(--positive)">Multiplier Effect</text>
+      <text x="460" y="96" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" fill="var(--on-surface)">Output PDB &amp; Kerja</text>
+    </svg>
+  </div>`
+};
+
+var QUESTIONS = [
+  {
+    id: 1, type: 'pg', topic: `Pertumbuhan Ekonomi`, level: `L3 (C4)`, difficulty: `Sulit`,
+    stimulusCaption: `Data Numerik PDB Riil Negara Y`,
+    stimulusText: `Berdasarkan laporan statistik ekonomi makro, diketahui Produk Domestik Bruto (PDB) riil Negara Y pada tahun 2024 tercatat sebesar Rp12.500 miliar, kemudian meningkat pada tahun 2025 menjadi Rp13.250 miliar.`,
+    visual: VISUALS.pdbNegaraY,
+    prompt: `Berdasarkan data tersebut, laju pertumbuhan ekonomi Negara Y pada tahun 2025 adalah sebesar…`,
+    options: [
+      `5,66%`,
+      `6,00%`,
+      `6,25%`,
+      `7,50%`,
+      `8,00%`
+    ],
+    answer: 1,
+    explanation: `Laju pertumbuhan ekonomi dihitung dengan rumus: g = [(PDBₜ − PDBₜ₋₁) / PDBₜ₋₁] × 100%. Maka: [(13.250 − 12.500) / 12.500] × 100% = (750 / 12.500) × 100% = 0,06 × 100% = 6,00%.`
+  },
+  {
+    id: 2, type: 'pg', topic: `Ketenagakerjaan & Pengangguran`, level: `L2 (C3)`, difficulty: `Sedang`,
+    stimulusCaption: `Pernyataan Fenomena Ketenagakerjaan`,
+    stimulusText: `Perhatikan fenomena pasar kerja berikut: (1) Kasir ritel konvensional tergeser mesin self-checkout berbasis AI; (2) Wisudawan baru menunggu panggilan wawancara kerja; (3) Tukang bangunan selesai mengerjakan proyek musiman; (4) Karyawan bekerja hanya 12 jam per minggu; (5) Operator pabrik kehilangan pekerjaan akibat otomatisasi robotik tanpa keahlian digital.`,
+    prompt: `Pernyataan yang mengidentifikasi bentuk pengangguran modern akibat disrupsi teknologi dan transformasi industri digital ditunjukkan oleh nomor…`,
+    options: [
+      `(1) dan (5)`,
+      `(1) dan (2)`,
+      `(2) dan (4)`,
+      `(3) dan (4)`,
+      `(3) dan (5)`
+    ],
+    answer: 0,
+    explanation: `Pernyataan (1) dan (5) menggambarkan pengangguran teknologi/struktural modern, di mana tenaga kerja tergantikan oleh mesin otomatisasi dan kecerdasan buatan (AI) serta mengalami kesenjangan keterampilan digital.`
+  },
+  {
+    id: 3, type: 'pg', topic: `Pembangunan Ekonomi`, level: `L2 (C3)`, difficulty: `Sedang`,
+    stimulusCaption: `Daftar Indikator Makroekonomi`,
+    stimulusText: `Cermati indikator berikut: (1) Pertumbuhan PDB riil yang diikuti pemerataan distribusi pendapatan; (2) Pertambahan jumlah penduduk usia produktif semata; (3) Perubahan struktur ekonomi dari sektor primer ke industri/jasa bernilai tambah; (4) Peningkatan Indeks Pembangunan Manusia (IPM) serta akses kesehatan dan pendidikan; (5) Kenaikan tingkat harga umum secara terus-menerus.`,
+    prompt: `Indikator utama yang menunjukkan keberhasilan pembangunan ekonomi nasional secara komprehensif adalah…`,
+    options: [
+      `(1), (2), dan (3)`,
+      `(1), (2), dan (5)`,
+      `(1), (3), dan (4)`,
+      `(2), (3), dan (5)`,
+      `(3), (4), dan (5)`
+    ],
+    answer: 2,
+    explanation: `Pembangunan ekonomi tidak hanya mengukur kenaikan PDB (kuantitatif), melainkan perubahan kualitatif berupa pemerataan pendapatan (1), transformasi struktur ekonomi (3), serta perbaikan kualitas hidup/IPM (4).`
+  },
+  {
+    id: 4, type: 'pg', topic: `Pengangguran & Solusinya`, level: `L3 (C4)`, difficulty: `Sulit`,
+    stimulusCaption: `Studi Kasus Negara Berkembang`,
+    stimulusText: `Sebuah negara berkembang mengalami lonjakan pengangguran terbuka karena pesatnya pertumbuhan penduduk tidak diimbangi perluasan kapasitas sektor formal, sementara mayoritas angkatan kerja berpendidikan menengah dan rendah.`,
+    prompt: `Analisis solusi berbasis industri padat karya yang paling tepat dan efektif untuk menekan angka pengangguran terbuka tersebut adalah…`,
+    options: [
+      `Mengimpor mesin robotik otomatis skala besar untuk menekan biaya upah buruh`,
+      `Memfokuskan investasi hanya pada sektor keuangan digital dan pasar modal`,
+      `Menaikkan batas upah minimum secara drastis tanpa insentif produktivitas`,
+      `Mengembangkan sentra industri manufaktur dan UMKM padat karya disertai pelatihan vokasi dasar di daerah`,
+      `Menutup seluruh akses investasi asing agar pelaku usaha lokal tidak tersaingi`
+    ],
+    answer: 3,
+    explanation: `Industri padat karya dan UMKM menyerap rasio tenaga kerja per unit modal yang tinggi, sehingga sangat relevan bagi negara berkembang dengan surplus angkatan kerja berpendidikan menengah/rendah apabila dipadukan dengan pelatihan vokasi.`
+  },
+  {
+    id: 5, type: 'pg', topic: `Pertumbuhan Ekonomi RI`, level: `L3 (C4)`, difficulty: `Sulit`,
+    stimulusCaption: `Wacana Artikel: Kinerja Ekonomi Indonesia`,
+    stimulusText: `Di tengah ketidakpastian geopolitik dan perlambatan ekonomi mitra dagang utama sepanjang tahun 2026, ekonomi Indonesia pada Triwulan III 2026 tetap mencatatkan pertumbuhan solid sebesar 5,47% (yoy). Stabilitas inflasi pangan menjaga belanja rumah tangga tetap tangguh, sementara proyek infrastruktur dan pabrik pemurnian mineral terus berjalan.`,
+    visual: VISUALS.kinerjaRI2026,
+    prompt: `Berdasarkan wacana dan tren grafik tersebut, faktor penopang utama pertumbuhan ekonomi Indonesia pada Triwulan III 2026 (5,47%) adalah…`,
+    options: [
+      `Ketangguhan konsumsi rumah tangga sebagai motor utama PDB, didukung berlanjutnya investasi (PMTB) serta hilirisasi`,
+      `Ketergantungan penuh pada pinjaman luar negeri jangka pendek untuk membiayai impor barang konsumsi`,
+      `Penurunan tingkat suku bunga acuan hingga 0% agar seluruh perbankan mencetak uang beredar`,
+      `Penghentian total aktivitas ekspor komoditas nonmigas ke kawasan Asia dan Eropa`,
+      `Peningkatan konsumsi barang mewah impor oleh kelompok rumah tangga berpendapatan tinggi`
+    ],
+    answer: 0,
+    explanation: `Dalam struktur PDB pengeluaran Indonesia, konsumsi rumah tangga menyumbang lebih dari 50% PDB. Terjaganya daya beli (konsumsi) yang berpadu dengan investasi fisik (PMTB) dan nilai tambah hilirisasi menjadi penopang utama pertumbuhan 5,47%.`
+  },
+  {
+    id: 6, type: 'pg', topic: `Perdagangan Internasional`, level: `L2 (C3)`, difficulty: `Sedang`,
+    stimulusCaption: `Wacana Kegiatan Ekspor Nasional`,
+    stimulusText: `Sepanjang tahun berjalan, produsen furnitur, karet olahan, dan produk perikanan nasional secara konsisten mengirimkan komoditas unggulannya ke pasar Jepang, Amerika Serikat, dan Uni Eropa.`,
+    prompt: `Berdasarkan wacana tersebut, manfaat strategis kegiatan ekspor dalam meningkatkan penerimaan devisa negara adalah…`,
+    options: [
+      `Menghapus kewajiban pemerintah dalam menyusun APBN setiap tahun anggaran`,
+      `Menurunkan nilai tukar mata uang domestik secara sengaja terhadap seluruh valuta asing`,
+      `Menambah cadangan devisa negara untuk membiayai impor barang modal, membayar kewajiban luar negeri, dan menjaga stabilitas kurs`,
+      `Mengurangi persaingan mutu produk di dalam negeri karena barang dijual ke luar negeri`,
+      `Menghentikan seluruh kebutuhan investasi teknologi dari luar negeri`
+    ],
+    answer: 2,
+    explanation: `Ekspor menghasilkan aliran masuk valuta asing (devisa) yang memperkuat cadangan devisa negara. Cadangan devisa krusial untuk membiayai impor bahan baku/modal, melunasi utang luar negeri, dan menstabilkan nilai tukar rupiah.`
+  },
+  {
+    id: 7, type: 'pg', topic: `Daya Saing Ekspor`, level: `L3 (C4)`, difficulty: `Sulit`,
+    prompt: `Produk ekspor Indonesia kerap kalah bersaing di pasar internasional karena ketergantungan pada ekspor bahan mentah dengan harga fluktuatif. Strategi paling tepat untuk meningkatkan daya saing produk Indonesia secara berkelanjutan melalui inovasi dan hilirisasi adalah…`,
+    options: [
+      `Menjual bahan tambang mentah dengan harga serendah mungkin tanpa pengolahan`,
+      `Mengembangkan riset desain, standardisasi mutu global, dan hilirisasi industri bernilai tambah tinggi`,
+      `Menghapus seluruh standar kelayakan ekspor agar volume pengiriman meningkat cepat`,
+      `Memberlakukan larangan impor total terhadap seluruh mesin dan bahan penolong industri`,
+      `Mengandalkan depresiasi tajam nilai tukar mata uang secara terus-menerus`
+    ],
+    answer: 1,
+    explanation: `Daya saing jangka panjang dicapai melalui inovasi produk, sertifikasi mutu internasional, dan hilirisasi industri agar Indonesia mengekspor barang jadi/setengah jadi bernilai tambah tinggi, bukan sekadar komoditas mentah.`
+  },
+  {
+    id: 8, type: 'pg', topic: `Hilirisasi Industri`, level: `L2 (C3)`, difficulty: `Sedang`,
+    prompt: `Kebijakan hilirisasi industri mengolah komoditas mentah seperti bijih nikel, bauksit, dan minyak sawit mentah di dalam negeri sebelum diekspor. Tujuan utama kegiatan hilirisasi tersebut adalah…`,
+    options: [
+      `Mengurangi jumlah tenaga kerja manufaktur agar pabrik lebih efisien`,
+      `Mempermudah negara mitra dagang menguasai bahan baku mentah dengan harga murah`,
+      `Membatasi peran pelaku usaha domestik dalam rantai pasok global`,
+      `Menggantikan seluruh sektor pertanian menjadi sektor pertambangan terbuka`,
+      `Meningkatkan nilai tambah produk olahan di dalam negeri, memperluas lapangan kerja industri, dan memaksimalkan devisa`
+    ],
+    answer: 4,
+    explanation: `Hilirisasi bertujuan mentransformasi komoditas primer menjadi produk industri olahan di dalam negeri sehingga nilai jual (nilai tambah), penyerapan tenaga kerja, pajak, dan penerimaan devisa meningkat berlipat.`
+  },
+  {
+    id: 9, type: 'pg', topic: `Pertumbuhan Ekonomi (PDB)`, level: `L3 (C4)`, difficulty: `Sulit`,
+    stimulusCaption: `Rilis Indikator Pertumbuhan PDB`,
+    stimulusText: `Badan Pusat Statistik melaporkan bahwa pertumbuhan ekonomi nasional pada Triwulan III 2026 mencapai 5,47% dibandingkan triwulan yang sama tahun sebelumnya.`,
+    prompt: `Interpretasi yang paling akurat terhadap makna angka pertumbuhan ekonomi 5,47% tersebut adalah…`,
+    options: [
+      `Tingkat harga seluruh barang kebutuhan pokok mengalami kenaikan sebesar 5,47%`,
+      `Jumlah uang beredar di masyarakat bertambah persis sebesar 5,47%`,
+      `Pendapatan setiap warga negara otomatis naik merata tepat sebesar 5,47%`,
+      `Volume aktivitas produksi barang dan jasa secara riil (harga konstan) meningkat 5,47% dibanding periode pembanding tahun sebelumnya`,
+      `Angka pengangguran terbuka turun langsung sebesar 5,47% pada triwulan tersebut`
+    ],
+    answer: 3,
+    explanation: `Pertumbuhan ekonomi mengukur perubahan persentase PDB riil (berdasarkan harga konstan untuk mengeluarkan efek inflasi). Angka 5,47% berarti kapasitas produksi barang dan jasa riil naik 5,47% dari periode yang sama tahun lalu.`
+  },
+  {
+    id: 10, type: 'pg', topic: `Pendapatan Nasional (PDB)`, level: `L2 (C3)`, difficulty: `Sedang`,
+    prompt: `Dalam penghitungan Produk Domestik Bruto (PDB) menggunakan pendekatan pengeluaran, rumus matematis yang tepat beserta komponennya adalah…`,
+    options: [
+      `Y = C + I + G + (X − M), mencakup konsumsi rumah tangga, investasi, belanja pemerintah, dan ekspor neto`,
+      `Y = w + r + i + p, mencakup upah pekerja, sewa tanah, bunga modal, dan laba pengusaha`,
+      `Y = C + S + T, mencakup konsumsi rumah tangga, tabungan pribadi, dan penerimaan pajak`,
+      `Y = ∑(P × Q) − pajak tidak langsung, mencakup nilai tambah setiap sektor lapangan usaha`,
+      `Y = GNP − penyusutan barang modal, mencakup pendapatan bersih warga negara di luar negeri`
+    ],
+    answer: 0,
+    explanation: `Pendekatan pengeluaran menjumlahkan seluruh permintaan akhir: Konsumsi rumah tangga (C), Investasi/PMTB (I), Pengeluaran pemerintah (G), dan Ekspor neto (X − M). Opsi B adalah pendekatan pendapatan, sedangkan D mirip pendekatan produksi.`
+  },
+  {
+    id: 11, type: 'pg', topic: `APBN & Pembangunan SDM`, level: `L3 (C5)`, difficulty: `Sulit`,
+    stimulusCaption: `Kebijakan Anggaran Pendidikan 20% APBN`,
+    stimulusText: `Pemerintah secara konsisten mengalokasikan minimal 20% dari total belanja APBN untuk sektor pendidikan, mencakup beasiswa riset, revitalisasi sekolah kejuruan, dan pelatihan guru.`,
+    prompt: `Analisis hubungan kausalitas antara kebijakan alokasi 20% anggaran pendidikan dalam APBN terhadap produktivitas marjinal tenaga kerja dan output PDB adalah…`,
+    options: [
+      `Alokasi pendidikan langsung menambah jumlah uang tunai di pasar tanpa memengaruhi kapasitas produksi`,
+      `Anggaran pendidikan menekan pertumbuhan ekonomi karena mengurangi belanja konsumsi rutin pemerintah`,
+      `Investasi pendidikan meningkatkan kualitas modal manusia (human capital) sehingga produktivitas marjinal per pekerja naik dan mendorong kapasitas output PDB jangka panjang`,
+      `Kenaikan anggaran pendidikan hanya berdampak pada konsumsi kertas dan alat tulis tanpa efek makroekonomi`,
+      `Produktivitas marjinal tenaga kerja menurun karena semakin banyak penduduk menunda masuk ke pasar kerja selamanya`
+    ],
+    answer: 2,
+    explanation: `Dalam teori pertumbuhan endogen dan human capital, belanja pendidikan yang efektif meningkatkan keterampilan, literasi teknologi, dan inovasi pekerja. Akibatnya, tambahan output yang dihasilkan tiap pekerja (produktivitas marjinal) meningkat dan memacu PDB.`
+  },
+  {
+    id: 12, type: 'pg', topic: `Jenis-jenis Pengangguran`, level: `L3 (C4)`, difficulty: `Sulit`,
+    stimulusCaption: `Kasus Transisi Karier Rani`,
+    stimulusText: `Rani telah bekerja selama tiga tahun sebagai staf administrasi keuangan di sebuah perusahaan logistik. Namun, ia memutuskan mengundurkan diri secara sukarela demi mencari peluang karier yang lebih menantang dan sesuai dengan minat profesionalnya. Selama dua bulan proses melamar dan seleksi di perusahaan baru, Rani berstatus tidak bekerja.`,
+    prompt: `Berdasarkan analisis karakteristik ketenagakerjaannya, kondisi yang dialami Rani diklasifikasikan sebagai…`,
+    options: [
+      `Pengangguran siklikal akibat resesi ekonomi global`,
+      `Pengangguran friksional karena jeda waktu pencarian kerja baru secara sukarela`,
+      `Pengangguran musiman akibat perubahan iklim usaha`,
+      `Pengangguran terselubung karena kelebihan tenaga administrasi`,
+      `Pengangguran teknologi akibat pergantian sistem akuntansi manual`
+    ],
+    answer: 1,
+    explanation: `Pengangguran friksional bersifat sementara dan sukarela yang muncul akibat proses pencarian serta pencocokan informasi kerja (time lag) ketika seseorang berpindah dari satu pekerjaan ke pekerjaan yang lebih baik.`
+  },
+  {
+    id: 13, type: 'pg', topic: `Landasan Hukum APBN/APBD`, level: `L2 (C3)`, difficulty: `Sedang`,
+    prompt: `Berdasarkan Undang-Undang Nomor 17 Tahun 2003 tentang Keuangan Negara, perbedaan mendasar antara APBN dan APBD dari segi otoritas pengesahan dan skala eksekusinya adalah…`,
+    options: [
+      `APBN disahkan oleh Mahkamah Agung untuk belanja BUMN, sedangkan APBD disahkan oleh Gubernur untuk desa`,
+      `APBN berlaku untuk periode lima tahunan, sedangkan APBD berlaku setiap tiga bulan sekali`,
+      `APBN hanya bersumber dari utang luar negeri, sedangkan APBD hanya berasal dari retribusi pasar`,
+      `APBN dibahas dan disahkan bersama DPR untuk skala nasional, sedangkan APBD dibahas dan disahkan bersama DPRD untuk skala daerah`,
+      `APBN dikelola oleh Bank Indonesia, sedangkan APBD dikelola oleh Kementerian Keuangan`
+    ],
+    answer: 3,
+    explanation: `Sesuai UU No. 17/2003, RAPBN diajukan Pemerintah Pusat dan disahkan menjadi UU bersama DPR RI untuk pelaksanaan nasional, sedangkan RAPBD diajukan Kepala Daerah dan ditetapkan bersama DPRD menjadi Peraturan Daerah (Perda) untuk lingkup provinsi/kabupaten/kota.`
+  },
+  {
+    id: 14, type: 'pg', topic: `Fungsi APBN`, level: `L3 (C4)`, difficulty: `Sulit`,
+    stimulusCaption: `Belanja Infrastruktur Strategis APBN`,
+    stimulusText: `Pemerintah pusat mengalokasikan porsi belanja modal APBN untuk membangun jaringan jalan tol penghubung kawasan industri, jembatan bentang panjang antarpulau, serta pelabuhan logistik nasional.`,
+    prompt: `Kebijakan pengalokasian APBN untuk penyediaan fasilitas publik yang meningkatkan efisiensi distribusi sumber daya ekonomi tersebut mencerminkan fungsi…`,
+    options: [
+      `Fungsi alokasi`,
+      `Fungsi distribusi`,
+      `Fungsi otorisasi`,
+      `Fungsi pengawasan`,
+      `Fungsi stabilisasi moneter`
+    ],
+    answer: 0,
+    explanation: `Fungsi alokasi berarti anggaran negara diarahkan untuk menciptakan lapangan kerja, mengurangi pemborosan sumber daya, dan menyediakan barang/fasilitas publik (jalan, jembatan, pelabuhan) guna meningkatkan efisiensi perekonomian.`
+  },
+  {
+    id: 15, type: 'pg', topic: `Format I-Account APBN`, level: `L3 (C4)`, difficulty: `Sulit`,
+    stimulusCaption: `Ilustrasi Format I-Account APBN`,
+    stimulusText: `Perhatikan struktur ringkas Format I-Account APBN pada diagram berikut di mana Belanja Negara (Rp3.350 T) lebih besar daripada Pendapatan Negara (Rp2.800 T) sehingga terjadi defisit sebesar Rp550 T.`,
+    visual: VISUALS.iAccountAPBN,
+    prompt: `Pada pos Pembiayaan Anggaran (D) dalam format I-Account tersebut, instrumen pembiayaan utama yang digunakan pemerintah untuk menutup defisit anggaran secara legal adalah…`,
+    options: [
+      `Mencetak uang kartal baru tanpa batas melalui perintah langsung kepada percetakan uang`,
+      `Membatalkan seluruh pembayaran gaji aparatur sipil negara pada tahun berjalan`,
+      `Memungut pajak tambahan secara sepihak di luar undang-undang perpajakan`,
+      `Menghapus seluruh dana transfer ke daerah dan dana desa secara mendadak`,
+      `Menerbitkan Surat Berharga Negara (SBN) dan/atau menarik pinjaman dalam dan luar negeri yang terkelola`
+    ],
+    answer: 4,
+    explanation: `Dalam struktur I-Account APBN, defisit anggaran (Pendapatan < Belanja) ditutup melalui pos Pembiayaan Anggaran netto, terutama melalui pembiayaan utang berupa penerbitan Surat Berharga Negara (SUN/SBSN) dan pinjaman resmi.`
+  },
+  {
+    id: 16, type: 'pg', topic: `Demografi & Pertumbuhan`, level: `L3 (C4)`, difficulty: `Sulit`,
+    prompt: `Jumlah penduduk yang besar dapat menjadi modal pasar, tetapi dalam kondisi tertentu justru berubah menjadi penghambat pertumbuhan ekonomi. Kondisi yang menyebabkan hal tersebut terjadi adalah…`,
+    options: [
+      `Tingginya angka melek teknologi digital disertai ketersediaan lapangan kerja industri kreatif`,
+      `Meningkatnya tabungan rumah tangga yang disalurkan ke investasi produktif perbankan`,
+      `Pesatnya jumlah penduduk tidak diimbangi peningkatan kualitas SDM dan perluasan lapangan kerja sehingga beban ketergantungan dan pengangguran membengkak`,
+      `Menurunnya tingkat kelahiran secara bertahap seiring meningkatnya kesejahteraan keluarga`,
+      `Tercapainya keseimbangan antara lulusan vokasi dengan kebutuhan sektor manufaktur modern`
+    ],
+    answer: 2,
+    explanation: `Penduduk yang besar tanpa kualitas pendidikan/kesehatan memadai serta minimnya penciptaan lapangan kerja akan menekan pendapatan per kapita, memicu pengangguran masal, dan meningkatkan beban subsidi sosial negara.`
+  },
+  {
+    id: 17, type: 'pg', topic: `Kebijakan Proteksi Impor`, level: `L3 (C4)`, difficulty: `Sulit`,
+    stimulusCaption: `Wacana Artikel Perdagangan Internasional`,
+    stimulusText: `Membanjirnya produk garmen dan keramik impor berharga sangat murah membuat puluhan pabrik domestik memangkas produksi. Sebagai respons, pemerintah resmi menaikkan tarif bea masuk barang konsumsi impor tersebut sebesar 20%.`,
+    prompt: `Analisis dampak ekonomi paling langsung dari kebijakan kenaikan tarif bea masuk barang konsumsi impor tersebut adalah…`,
+    options: [
+      `Harga barang impor di pasar domestik turun drastis sehingga konsumen beralih ke produk asing`,
+      `Harga jual barang impor di dalam negeri menjadi lebih mahal sehingga daya saing produk lokal meningkat dan industri domestik terlindungi`,
+      `Volume ekspor negara pengekspor meningkat tajam akibat bebasnya hambatan tarif`,
+      `Penerimaan negara dari sektor pajak perdagangan internasional otomatis menjadi nol`,
+      `Produsen lokal terpaksa menutup pabrik karena biaya produksi di dalam negeri naik dua kali lipat`
+    ],
+    answer: 1,
+    explanation: `Tarif bea masuk menambah komponen harga barang impor di pasar dalam negeri. Harga barang impor yang lebih mahal mendorong konsumen beralih ke produk substitusi buatan dalam negeri, sehingga daya saing produsen lokal menguat.`
+  },
+  {
+    id: 18, type: 'pg', topic: `Neraca Perdagangan`, level: `L3 (C4)`, difficulty: `Sulit`,
+    stimulusCaption: `Data Perdagangan Barang Internasional`,
+    stimulusText: `Berdasarkan catatan kepabeanan selama satu tahun anggaran, total nilai ekspor barang suatu negara mencapai US$85.000 M, sedangkan total nilai impor barangnya mencapai US$92.000 M.`,
+    visual: VISUALS.neracaDefisit18,
+    prompt: `Berdasarkan data grafik tersebut, posisi dan saldo neraca perdagangan negara tersebut adalah…`,
+    options: [
+      `Surplus sebesar US$7.000 M`,
+      `Surplus sebesar US$17.000 M`,
+      `Seimbang karena selisih kurang dari 10%`,
+      `Defisit sebesar US$7.000 M`,
+      `Defisit sebesar US$85.000 M`
+    ],
+    answer: 3,
+    explanation: `Saldo Neraca Perdagangan = Nilai Ekspor − Nilai Impor = US$85.000 M − US$92.000 M = −US$7.000 M. Karena nilai impor lebih besar daripada ekspor, negara mengalami defisit neraca perdagangan sebesar US$7.000 M.`
+  },
+  {
+    id: 19, type: 'pg', topic: `Teori Keunggulan Komparatif`, level: `L3 (C4)`, difficulty: `Sulit`,
+    stimulusCaption: `Kasus Efisiensi Pertukaran Negara X dan Negara Z`,
+    stimulusText: `Negara X memiliki produktivitas lebih tinggi daripada Negara Z baik dalam memproduksi kopi maupun mesin tekstil. Namun, tingkat efisiensi relatif Negara X jauh lebih unggul pada produksi mesin tekstil, sedangkan Negara Z memiliki biaya peluang lebih rendah dalam memproduksi kopi. Keduanya sepakat berspesialisasi dan saling menukar komoditas.`,
+    prompt: `Teori perdagangan internasional yang paling tepat menjelaskan mekanisme pertukaran yang tetap menguntungkan kedua negara tersebut adalah…`,
+    options: [
+      `Teori Keunggulan Komparatif (David Ricardo)`,
+      `Teori Merkantilisme Klasik`,
+      `Teori Keunggulan Mutlak (Adam Smith)`,
+      `Teori Kuantitas Uang (Irving Fisher)`,
+      `Teori Siklus Kehidupan Produk (Raymond Vernon)`
+    ],
+    answer: 0,
+    explanation: `David Ricardo melalui Teori Keunggulan Komparatif menjelaskan bahwa meskipun suatu negara unggul mutlak pada semua komoditas, perdagangan tetap menguntungkan bila tiap negara berspesialisasi pada barang dengan keunggulan komparatif (biaya peluang relatif terendah).`
+  },
+  {
+    id: 20, type: 'pg', topic: `Sumber Devisa Negara`, level: `L2 (C3)`, difficulty: `Sedang`,
+    stimulusCaption: `Daftar Aktivitas Ekonomi Luar Negeri`,
+    stimulusText: `Perhatikan transaksi berikut: (1) Ekspor komoditas teh dan kopi ke Eropa; (2) Pembelian saham perusahaan luar negeri oleh investor domestik; (3) Pengeluaran wisatawan mancanegara yang berlibur di Indonesia; (4) Remitansi atau kiriman uang pekerja migran Indonesia dari luar negeri; (5) Pembayaran impor mesin berat industri.`,
+    prompt: `Aktivitas yang menjadi sumber penerimaan devisa negara ditunjukkan oleh nomor…`,
+    options: [
+      `(1), (2), dan (3)`,
+      `(1), (3), dan (4)`,
+      `(2), (3), dan (5)`,
+      `(2), (4), dan (5)`,
+      `(3), (4), dan (5)`
+    ],
+    answer: 1,
+    explanation: `Sumber devisa adalah transaksi yang mendatangkan aliran masuk valuta asing ke dalam negeri: ekspor barang (1), kedatangan turis asing (3), dan remitansi tenaga kerja di luar negeri (4). Nomor (2) dan (5) mengeluarkan devisa.`
+  },
+  {
+    id: 21, type: 'pg', topic: `Kerja Sama Bilateral vs Multilateral`, level: `L2 (C3)`, difficulty: `Sedang`,
+    stimulusCaption: `Bentuk Kerja Sama Ekonomi RI`,
+    stimulusText: `Indonesia menandatangani perjanjian kemitraan ekonomi Indonesia–Jepang (IJEPA) untuk memperlancar investasi dan perdagangan antara Jakarta dan Tokyo, sekaligus aktif sebagai anggota World Trade Organization (WTO) bersama lebih dari 160 negara lainnya.`,
+    prompt: `Perbedaan klasifikasi kerja sama IJEPA dan WTO secara berurutan adalah…`,
+    options: [
+      `Kerja sama regional dan kerja sama sub-regional`,
+      `Kerja sama multilateral dan kerja sama bilateral`,
+      `Kerja sama bilateral (2 negara) dan kerja sama multilateral (banyak negara)`,
+      `Kerja sama sektor moneter dan kerja sama sektor pertahanan`,
+      `Kerja sama komoditas primer dan kerja sama serikat pabean`
+    ],
+    answer: 2,
+    explanation: `IJEPA hanya mengikat dua negara (Indonesia dan Jepang), sehingga termasuk kerja sama bilateral. WTO menghimpun banyak negara di seluruh dunia tanpa batasan kawasan geografis, sehingga termasuk kerja sama multilateral.`
+  },
+  {
+    id: 22, type: 'pg', topic: `Kebijakan Moneter`, level: `L3 (C4)`, difficulty: `Sulit`,
+    stimulusCaption: `Skenario Overheating Ekonomi & Inflasi`,
+    stimulusText: `Perekonomian tumbuh sangat cepat disertai lonjakan kredit konsumtif dan permintaan agregat berlebih, sehingga memicu potensi inflasi tinggi yang menggerus daya beli masyarakat.`,
+    prompt: `Tindakan kebijakan moneter kontraktif yang paling tepat diambil Bank Sentral untuk menekan laju inflasi tersebut adalah…`,
+    options: [
+      `Menurunkan giro wajib minimum perbankan agar penyaluran kredit semakin longgar`,
+      `Membeli surat berharga pemerintah di pasar terbuka untuk menambah likuiditas`,
+      `Menurunkan suku bunga acuan agar masyarakat giat meminjam uang`,
+      `Menghapus seluruh ketentuan cadangan kas bank umum`,
+      `Menaikkan suku bunga acuan (kebijakan diskonto naik) untuk menyerap kelebihan uang beredar dan menahan kredit`
+    ],
+    answer: 4,
+    explanation: `Saat inflasi akibat kelebihan permintaan/likuiditas, Bank Sentral menerapkan kebijakan moneter kontraktif dengan menaikkan suku bunga acuan sehingga minat menabung meningkat, biaya pinjaman naik, dan jumlah uang beredar terkendali.`
+  },
+  {
+    id: 23, type: 'pg', topic: `Dampak Pengangguran`, level: `L2 (C3)`, difficulty: `Sedang`,
+    prompt: `Peningkatan angka pengangguran dalam skala luas berdampak negatif terhadap kinerja ekonomi makro. Dampak langsung pengangguran terhadap penurunan pendapatan nasional adalah…`,
+    options: [
+      `Menurunnya output produksi barang/jasa sekaligus melemahnya pendapatan per kapita dan konsumsi masyarakat`,
+      `Meningkatnya penerimaan pajak penghasilan pribadi secara signifikan`,
+      `Bertambahnya nilai ekspor bersih karena produksi dalam negeri tidak terserap`,
+      `Menurunnya beban subsidi jaminan sosial dalam anggaran belanja negara`,
+      `Naiknya tingkat tabungan nasional karena seluruh pengangguran menabung di bank`
+    ],
+    answer: 0,
+    explanation: `Pengangguran berarti faktor produksi tenaga kerja tidak termanfaatkan secara optimal, sehingga output riil (PDB) turun, pendapatan per kapita merosot, dan daya beli konsumsi rumah tangga melemah.`
+  },
+  {
+    id: 24, type: 'pg', topic: `Perdagangan RI - Jepang`, level: `L2 (C3)`, difficulty: `Sedang`,
+    stimulusCaption: `Studi Kasus Ekspor-Impor RI dan Jepang`,
+    stimulusText: `Indonesia secara rutin mengimpor kendaraan bermotor dan komponen permesinan presisi dari Jepang, sementara Jepang mengimpor gas alam cair (LNG) serta hasil tambang dari Indonesia.`,
+    prompt: `Faktor pendorong utama yang melandasi hubungan perdagangan kedua negara pada kasus tersebut adalah…`,
+    options: [
+      `Kesamaan mutlak jenis iklim dan komoditas pertanian di kedua negara`,
+      `Kewajiban politik untuk menukar barang dengan nilai berat yang identik`,
+      `Keinginan Indonesia untuk memutus jalur perdagangan dengan kawasan Eropa`,
+      `Perbedaan ketersediaan sumber daya alam serta penghematan biaya produksi melalui keunggulan teknologi`,
+      `Ketiadaan mata uang resmi sehingga harus melakukan barter komoditas`
+    ],
+    answer: 3,
+    explanation: `Indonesia kaya energi/SDA (LNG) sedangkan Jepang memiliki teknologi manufaktur otomotif yang lebih hemat biaya per unit. Perbedaan SDA dan efisiensi biaya produksi mendorong spesialisasi dan perdagangan kedua negara.`
+  },
+  {
+    id: 25, type: 'pg', topic: `Faktor Perdagangan Internasional`, level: `L1 (C2)`, difficulty: `Mudah`,
+    stimulusCaption: `Daftar Faktor Ekonomi`,
+    stimulusText: `Cermati daftar faktor berikut: (1) Perbedaan ketersediaan sumber daya alam; (2) Efisiensi penghematan biaya produksi; (3) Perbedaan selera konsumen antarnegara; (4) Kebijakan isolasi ekonomi tertutup total; (5) Keseragaman mutlak biaya produksi dan teknologi.`,
+    prompt: `Tiga faktor pendorong utama terjadinya perdagangan internasional ditunjukkan oleh nomor…`,
+    options: [
+      `(1), (2), dan (3)`,
+      `(1), (3), dan (4)`,
+      `(2), (3), dan (5)`,
+      `(2), (4), dan (5)`,
+      `(3), (4), dan (5)`
+    ],
+    answer: 0,
+    explanation: `Perdagangan internasional didorong oleh perbedaan SDA (1), penghematan/perbedaan biaya produksi (2), serta perbedaan selera masyarakat (3). Isolasi ekonomi justru menghambat perdagangan.`
+  },
+  {
+    id: 26, type: 'pg', topic: `Transaksi Debet Neraca Pembayaran`, level: `L2 (C3)`, difficulty: `Sedang`,
+    stimulusCaption: `Transaksi Ekonomi Luar Negeri`,
+    stimulusText: `Perhatikan transaksi berikut: (1) Warga negara Indonesia melancong/berwisata ke luar negeri; (2) Pengusaha nasional mengekspor kopi ke Jerman; (3) Pembayaran bunga utang kepada bank di luar negeri; (4) Pembelian saham perusahaan asing di bursa luar negeri oleh investor domestik; (5) Penerimaan hibah bencana dari lembaga internasional.`,
+    prompt: `Transaksi yang dicatat pada posisi debet (arus keluar devisa) dalam neraca pembayaran internasional ditunjukkan oleh nomor…`,
+    options: [
+      `(1), (2), dan (3)`,
+      `(1), (2), dan (5)`,
+      `(1), (3), dan (4)`,
+      `(2), (4), dan (5)`,
+      `(3), (4), dan (5)`
+    ],
+    answer: 2,
+    explanation: `Transaksi debet adalah transaksi yang menimbulkan kewajiban pembayaran ke luar negeri (devisa keluar): turis domestik melancong ke LN (1), membayar bunga bank LN (3), dan membeli aset/saham LN (4). Nomor (2) dan (5) dicatat di posisi kredit.`
+  },
+  {
+    id: 27, type: 'pg', topic: `Defisit Neraca Perdagangan`, level: `L2 (C3)`, difficulty: `Sedang`,
+    prompt: `Dalam analisis perdagangan luar negeri, neraca perdagangan Indonesia dinyatakan berada pada posisi defisit apabila…`,
+    options: [
+      `Nilai ekspor barang lebih besar dibandingkan nilai impor barang pada suatu periode`,
+      `Nilai ekspor barang lebih kecil dibandingkan nilai impor barang pada suatu periode`,
+      `Jumlah transaksi jasa sama persis dengan nilai investasi portofolio`,
+      `Penerimaan devisa pariwisata melebihi pengeluaran mahasiswa Indonesia di luar negeri`,
+      `Kurs mata uang rupiah menguat tajam terhadap dolar Amerika Serikat`
+    ],
+    answer: 1,
+    explanation: `Neraca perdagangan hanya membandingkan nilai ekspor barang dan impor barang. Jika Nilai Ekspor < Nilai Impor (X < M), maka saldo bernilai negatif atau defisit.`
+  },
+  {
+    id: 28, type: 'pg', topic: `Analisis Tabel Neraca Perdagangan`, level: `L3 (C4)`, difficulty: `Sulit`,
+    stimulusCaption: `Tabel Perbandingan Ekspor–Impor Dua Negara`,
+    stimulusText: `Cermati data ekspor dan impor barang Negara Aman serta Negara Damai pada tabel berikut:`,
+    visual: VISUALS.tabelAmanDamai,
+    prompt: `Kesimpulan analitis yang paling tepat berdasarkan data tabel neraca perdagangan tersebut adalah…`,
+    options: [
+      `Negara Aman mengalami surplus US$13.000 M, sedangkan Negara Damai defisit US$20.000 M`,
+      `Kedua negara mengalami surplus neraca perdagangan dengan total gabungan US$33.000 M`,
+      `Negara Aman memiliki neraca perdagangan seimbang karena selisih ekspor-impornya kecil`,
+      `Negara Damai mengalami defisit US$20.000 M karena nilai impornya terlalu besar`,
+      `Negara Damai mengalami surplus neraca perdagangan sebesar US$20.000 M, sedangkan Negara Aman defisit US$13.000 M`
+    ],
+    answer: 4,
+    explanation: `Negara Damai: Ekspor (94.000) − Impor (74.000) = +US$20.000 M (Surplus US$20.000 M). Negara Aman: Ekspor (65.000) − Impor (78.000) = −US$13.000 M (Defisit US$13.000 M).`
+  },
+  {
+    id: 29, type: 'pg', topic: `Interpretasi Neraca Pembayaran`, level: `L3 (C4)`, difficulty: `Sulit`,
+    stimulusCaption: `Tabel Neraca Pembayaran Negara Sejahtera`,
+    stimulusText: `Pelajari komponen Neraca Pembayaran (Balance of Payments) Negara Sejahtera pada tahun berjalan berikut:`,
+    visual: VISUALS.tabelBOP29,
+    prompt: `Berdasarkan interpretasi tabel komprehensif di atas, kesimpulan paling akurat mengenai saldo dan penyebab kondisi neraca pembayaran Negara Sejahtera adalah…`,
+    options: [
+      `Neraca pembayaran mengalami defisit US$18 miliar karena keluarnya investasi portofolio`,
+      `Transaksi berjalan mengalami defisit US$22 miliar akibat tingginya nilai impor barang`,
+      `Neraca pembayaran mengalami surplus US$18 miliar yang ditopang surplus neraca perdagangan (+US$25 miliar) dan derasnya arus masuk FDI (+US$22 miliar)`,
+      `Neraca jasa menjadi penyumbang surplus terbesar bagi keseluruhan neraca pembayaran`,
+      `Saldo keseluruhan neraca pembayaran negatif karena pendapatan primer dan sekunder bernilai minus`
+    ],
+    answer: 2,
+    explanation: `Saldo total neraca pembayaran = Transaksi Berjalan (+3) + Transaksi Modal & Finansial (+22 − 7 = +15) = +US$18 miliar (Surplus). Penyebab utamanya adalah surplus perdagangan barang (+25) dan investasi langsung asing/FDI (+22) yang menutupi defisit jasa (−14), pendapatan neto (−8), dan portofolio (−7).`
+  },
+  {
+    id: 30, type: 'pg', topic: `Sumber-sumber Devisa`, level: `L2 (C3)`, difficulty: `Sedang`,
+    stimulusCaption: `Daftar Fungsi, Sumber, dan Penggunaan Devisa`,
+    stimulusText: `Perhatikan pernyataan berikut: (1) Hasil ekspor komoditas nonmigas ke mancanegara; (2) Pembayaran impor mesin dan bahan baku industri; (3) Penerimaan devisa dari sektor pariwisata wisatawan asing; (4) Pinjaman luar negeri yang diterima pemerintah; (5) Pembiayaan kunjungan dinas pejabat dan kedutaan besar di luar negeri.`,
+    prompt: `Kombinasi yang seluruhnya merupakan sumber penerimaan devisa negara ditunjukkan oleh nomor…`,
+    options: [
+      `(1), (2), dan (3)`,
+      `(1), (2), dan (5)`,
+      `(2), (4), dan (5)`,
+      `(1), (3), dan (4)`,
+      `(3), (4), dan (5)`
+    ],
+    answer: 3,
+    explanation: `Sumber devisa mendatangkan valuta asing masuk: hasil ekspor (1), belanja wisatawan mancanegara (3), dan pinjaman luar negeri yang diterima (4). Nomor (2) dan (5) merupakan pos penggunaan devisa.`
+  },
+  {
+    id: 31, type: 'pg', topic: `Faktor Pendorong Perdagangan`, level: `L2 (C3)`, difficulty: `Sedang`,
+    stimulusCaption: `Latar Belakang Pertukaran RI–Jepang`,
+    stimulusText: `Indonesia memiliki cadangan nikel, batubara, dan gas alam yang melimpah di kepulauannya, sedangkan Jepang miskin sumber daya tambang energi namun unggul dalam perakitan barang elektronik dan kendaraan bermotor.`,
+    prompt: `Latar belakang pertukaran komoditas antara Indonesia dan Jepang tersebut secara paling akurat disebabkan oleh faktor…`,
+    options: [
+      `Kesamaan budaya kerja dan sistem pendidikan tinggi`,
+      `Perbedaan sumber daya alam yang dimiliki masing-masing negara`,
+      `Kesamaan tingkat suku bunga acuan bank sentral`,
+      `Adanya larangan produksi kendaraan di seluruh Asia Tenggara`,
+      `Perbedaan zona waktu perdagangan pasar saham`
+    ],
+    answer: 1,
+    explanation: `Ketidakmerataan distribusi sumber daya alam (endowment faktor geografis dan tambang) membuat suatu negara memiliki kelebihan komoditas primer tertentu sementara negara lain memerlukannya sebagai input industri.`
+  },
+  {
+    id: 32, type: 'pg', topic: `Teori Keunggulan Komparatif`, level: `L3 (C4)`, difficulty: `Sulit`,
+    stimulusCaption: `Ilustrasi Biaya Tenaga Kerja Negara X dan Negara Z`,
+    stimulusText: `Negara X memerlukan 2 jam kerja untuk 1 unit tekstil dan 4 jam kerja untuk 1 unit baja. Sementara itu, Negara Z memerlukan 6 jam kerja untuk 1 unit tekstil dan 6 jam kerja untuk 1 unit baja. Meski Negara X unggul mutlak di kedua produk, Negara X memilih mengekspor tekstil dan Negara Z mengekspor baja.`,
+    prompt: `Tanggapan analitis yang paling tepat atas penerapan teori keunggulan komparatif pada ilustrasi tersebut adalah…`,
+    options: [
+      `Keputusan tepat karena biaya peluang 1 tekstil di Negara X hanya 0,5 baja (lebih rendah daripada 1 baja di Negara Z), dan 1 baja di Negara Z hanya 1 tekstil (lebih rendah daripada 2 tekstil di Negara X)`,
+      `Negara X sebaiknya tidak berdagang dengan Negara Z karena Negara X unggul absolut di kedua barang`,
+      `Negara Z seharusnya mengekspor tekstil karena waktu produksinya lebih lama dibandingkan Negara X`,
+      `Pertukaran tersebut merugikan Negara X karena jam kerja Negara Z lebih tinggi untuk kedua barang`,
+      `Kedua negara memiliki biaya peluang yang identik sehingga perdagangan tidak menghasilkan efisiensi`
+    ],
+    answer: 0,
+    explanation: `Di Negara X, biaya peluang 1 tekstil = 2/4 = 0,5 baja (dan 1 baja = 2 tekstil). Di Negara Z, biaya peluang 1 tekstil = 6/6 = 1 baja (dan 1 baja = 1 tekstil). Dengan berspesialisasi di keunggulan komparatifnya (X: tekstil, Z: baja), total efisiensi produksi dunia meningkat.`
+  },
+  {
+    id: 33, type: 'pg', topic: `Bea Masuk & Proteksi Domestik`, level: `L3 (C4)`, difficulty: `Sulit`,
+    prompt: `Pemerintah memberlakukan kebijakan penaikan tarif bea masuk atas produk alas kaki impor guna merespons lesunya penjualan produsen sepatu lokal. Analisis dampak kebijakan tersebut terhadap pasar domestik adalah…`,
+    options: [
+      `Volume barang impor meningkat tajam karena bea masuk membuat harga impor turun`,
+      `Seluruh produsen lokal beralih menjadi importir karena bea masuk menguntungkan barang asing`,
+      `Konsumen domestik tidak lagi dapat membeli produk lokal di pasar tradisional`,
+      `Volume barang impor menurun akibat kenaikan harga paska-pajak, sehingga pasar domestik terlindungi dan produksi lokal berpeluang tumbuh`,
+      `Tarif bea masuk otomatis menghapus kebutuhan bahan baku di industri dalam negeri`
+    ],
+    answer: 3,
+    explanation: `Penaikan bea masuk menekan daya saing harga produk impor di pasar lokal, sehingga volume impor berkurang. Hal ini memberi ruang proteksi bagi industri domestik untuk mempertahankan pangsa pasar dan tenaga kerjanya.`
+  },
+  {
+    id: 34, type: 'pg', topic: `Dampak Kerja Sama Bilateral`, level: `L3 (C4)`, difficulty: `Sulit`,
+    stimulusCaption: `Dua Contoh Kerja Sama Ekonomi Bilateral RI`,
+    stimulusText: `Indonesia menjalankan kerja sama bilateral di bidang pengembangan industri otomotif dan manufaktur teknologi tinggi dengan Jepang, serta kerja sama bilateral penempatan dan perlindungan tenaga kerja dengan Arab Saudi.`,
+    prompt: `Analisis dampak ekonomi yang paling tepat dari kedua kerja sama bilateral tersebut bagi Indonesia adalah…`,
+    options: [
+      `Kerja sama dengan Jepang menurunkan kualitas teknologi nasional, sedangkan dengan Arab Saudi mengurangi cadangan devisa`,
+      `Kedua kerja sama hanya berdampak pada penghapusan pajak ekspor komoditas perkebunan kelapa sawit`,
+      `Kerja sama dengan Jepang mendorong alih teknologi dan peningkatan kapasitas manufaktur, sedangkan dengan Arab Saudi memperluas kesempatan kerja dan meningkatkan penerimaan devisa dari remitansi PMI`,
+      `Kerja sama dengan Jepang bertujuan mengirim tenaga kerja kasar, sedangkan dengan Arab Saudi mengimpor kendaraan listrik`,
+      `Kedua kerja sama menyebabkan ketergantungan impor pangan permanen tanpa manfaat bagi tenaga kerja`
+    ],
+    answer: 2,
+    explanation: `Kemitraan industri dengan negara maju seperti Jepang mempercepat transfer teknologi (alih teknologi) dan standar manufaktur, sementara kemitraan ketenagakerjaan dengan Arab Saudi memperluas penyerapan tenaga kerja serta mendatangkan devisa remitansi.`
+  },
+  {
+    id: 35, type: 'pg', topic: `Kerja Sama Bilateral vs Multilateral`, level: `L1 (C2)`, difficulty: `Mudah`,
+    prompt: `Perbedaan mendasar dalam cakupan batasan keanggotaan antara kerja sama ekonomi bilateral dan kerja sama ekonomi multilateral terletak pada…`,
+    options: [
+      `Kerja sama bilateral selalu menggunakan mata uang tunggal, sedangkan multilateral menggunakan barter`,
+      `Kerja sama bilateral hanya membahas bidang pertanian, sedangkan multilateral hanya membahas perbankan`,
+      `Kerja sama bilateral berada di bawah PBB secara langsung, sedangkan multilateral bersifat rahasia`,
+      `Kerja sama bilateral berlaku selamanya tanpa batas waktu, sedangkan multilateral berlaku satu tahun`,
+      `Kerja sama bilateral hanya melibatkan dua negara, sedangkan kerja sama multilateral melibatkan banyak negara dari berbagai kawasan dunia`
+    ],
+    answer: 4,
+    explanation: `Secara konseptual, batas keanggotaan kerja sama bilateral adalah tepat dua negara, sedangkan multilateral melibatkan banyak negara secara bersamaan dalam skala luas/global.`
+  },
+
+  // 5 SOAL URAIAN (36-40)
+  {
+    id: 36, type: 'essay', essayNum: 1, topic: `Pendidikan & Growth (Human Capital)`, level: `L3 (C5)`, difficulty: `Sulit`,
+    stimulusCaption: `Kebijakan Alokasi 20% Anggaran Pendidikan APBN`,
+    stimulusText: `Pembangunan ekonomi modern menempatkan kualitas manusia sebagai penggerak utama pertumbuhan jangka panjang, bukan semata akumulasi modal fisik atau kekayaan alam.`,
+    prompt: `Analisislah secara komprehensif bagaimana peningkatan akses dan kualitas pendidikan sebagai investasi modal manusia (human capital) mampu mendongkrak produktivitas marjinal tenaga kerja dan berdampak pada peningkatan output PDB nasional!`,
+    keywords: [
+      { label: `Modal manusia / Human capital`, terms: [`modal manusia`, `human capital`, `kualitas sdm`, `sumber daya manusia`] },
+      { label: `Keterampilan & inovasi`, terms: [`keterampilan`, `keahlian`, `kompetensi`, `inovasi`, `teknologi`, `riset`] },
+      { label: `Produktivitas marjinal`, terms: [`produktivitas marjinal`, `produktivitas`, `efisiensi`, `nilai tambah`] },
+      { label: `Output PDB & pertumbuhan`, terms: [`pdb`, `output`, `pertumbuhan ekonomi`, `pendapatan nasional`, `kapasitas produksi`] }
+    ],
+    modelAnswer: `1) Investasi pendidikan meningkatkan akumulasi modal manusia (human capital) berupa penguasaan literasi, keterampilan teknis/vokasi, serta kemampuan beradaptasi dengan teknologi baru. 2) Tenaga kerja yang terdidik bekerja lebih efisien, meminimalkan kesalahan produksi, dan mampu berinovasi, sehingga tambahan output yang dihasilkan tiap tambahan satu unit tenaga kerja (produktivitas marjinal) meningkat signifikan. 3) Kenaikan produktivitas marjinal tersebut mendorong pergeseran kapasitas produksi nasional ke kanan, meningkatkan nilai tambah sektor industri maupun jasa, dan memacu pertumbuhan output PDB secara berkelanjutan.`
+  },
+  {
+    id: 37, type: 'essay', essayNum: 2, topic: `Pertumbuhan Ekonomi & Kesejahteraan`, level: `L3 (C5)`, difficulty: `Sulit`,
+    stimulusCaption: `Data PDB Riil Negara Bahagia (2022–2023)`,
+    stimulusText: `Diketahui Produk Domestik Bruto (PDB) riil Negara Bahagia pada tahun 2022 sebesar Rp600 triliun, kemudian meningkat menjadi Rp700 triliun pada tahun 2023.`,
+    visual: VISUALS.negaraBahagia37,
+    prompt: `(a) Hitunglah laju pertumbuhan ekonomi Negara Bahagia pada tahun 2023 beserta langkah perhitungannya! (b) Analisislah dua implikasi dari pertumbuhan ekonomi tersebut terhadap penyerapan tenaga kerja dan peningkatan kesejahteraan masyarakat!`,
+    keywords: [
+      { label: `Rumus & langkah (700 - 600) / 600`, terms: [`700`, `600`, `100`] },
+      { label: `Hasil tepat 16,67%`, terms: [`16,67`, `16.67`, `16,66`, `16,7`] },
+      { label: `Implikasi penyerapan tenaga kerja`, terms: [`tenaga kerja`, `lapangan kerja`, `pengangguran`, `ekspansi usaha`] },
+      { label: `Implikasi kesejahteraan & pemerataan`, terms: [`kesejahteraan`, `pendapatan per kapita`, `daya beli`, `pemerataan`, `standar hidup`] }
+    ],
+    modelAnswer: `(a) Perhitungan: Laju Pertumbuhan Ekonomi = [(PDB 2023 − PDB 2022) / PDB 2022] × 100% = [(700 − 600) / 600] × 100% = (100 / 600) × 100% = 16,67%. (b) Implikasi: Pertama, terhadap penyerapan tenaga kerja: ekspansi output riil sebesar 16,67% menuntut perusahaan memperluas kapasitas pabrik dan jasa sehingga permintaan tenaga kerja naik dan angka pengangguran menurun. Kedua, terhadap kesejahteraan masyarakat: peningkatan pendapatan nasional mendorong kenaikan pendapatan per kapita dan daya beli rumah tangga, meski peningkatan kesejahteraan yang merata tetap mensyaratkan distribusi pendapatan yang adil serta inflasi yang terkendali.`
+  },
+  {
+    id: 38, type: 'essay', essayNum: 3, topic: `Mekanisme Injeksi APBN (Core Reactor)`, level: `L3 (C5)`, difficulty: `Sulit`,
+    stimulusCaption: `Skema APBN sebagai Core Reactor Perekonomian`,
+    stimulusText: `Dalam kebijakan fiskal ekspansif, APBN berperan sebagai reaktor inti (core reactor) yang menstimulasi sektor riil ketika permintaan swasta melemah.`,
+    visual: VISUALS.coreReactor38,
+    prompt: `Uraikanlah mekanisme kerja injeksi anggaran subsidi dan belanja modal (infrastruktur) dalam APBN sebagai katalisator pertumbuhan ekonomi nasional!`,
+    keywords: [
+      { label: `Mekanisme injeksi subsidi`, terms: [`subsidi`, `daya beli`, `harga terjangkau`, `konsumsi`] },
+      { label: `Mekanisme belanja modal`, terms: [`belanja modal`, `infrastruktur`, `proyek`, `konektivitas`, `logistik`] },
+      { label: `Efek permintaan agregat / multiplier`, terms: [`permintaan agregat`, `multiplier`, `efek berganda`, `investasi`, `sektor riil`] },
+      { label: `Dampak pertumbuhan PDB`, terms: [`pertumbuhan ekonomi`, `pdb`, `lapangan kerja`, `katalisator`] }
+    ],
+    modelAnswer: `1) Injeksi Subsidi (energi, pangan, atau bunga kredit UMKM): menjaga harga barang pokok tetap terjangkau sehingga daya beli masyarakat tidak jatuh dan biaya produksi UMKM tetap ringan; hal ini mempertahankan tingkat konsumsi rumah tangga (C) dan permintaan agregat. 2) Injeksi Belanja Modal (pembangunan jalan, pelabuhan, irigasi, jaringan listrik): langsung menyerap tenaga kerja konstruksi serta memesan bahan baku dari industri domestik (efek pengganda/multiplier effect), sekaligus menurunkan biaya logistik jangka panjang agar investasi swasta (I) tertarik masuk. 3) Kombinasi keduanya menggerakkan konsumsi dan investasi secara serentak sehingga APBN menjadi katalisator pertumbuhan PDB.`
+  },
+  {
+    id: 39, type: 'essay', essayNum: 4, topic: `Hambatan Perdagangan Internasional`, level: `L3 (C4)`, difficulty: `Sulit`,
+    prompt: `Uraikanlah secara rinci minimal empat faktor yang menyebabkan suatu negara enggan atau terhambat untuk terlibat secara aktif dalam perdagangan internasional!`,
+    keywords: [
+      { label: `Kebijakan proteksi ekstrem (tarif/kuota)`, terms: [`proteksi`, `tarif`, `kuota`, `bea masuk`, `hambatan dagang`] },
+      { label: `Sanksi / embargo / konflik`, terms: [`sanksi`, `embargo`, `konflik`, `perang`, `geopolitik`, `keamanan`] },
+      { label: `Kebijakan ekonomi tertutup / autarki`, terms: [`tertutup`, `autarki`, `isolasi`, `swasembada`] },
+      { label: `Ketidakstabilan kurs / birokrasi / infrastruktur`, terms: [`kurs`, `mata uang`, `birokrasi`, `logistik`, `kualitas`, `regulasi`] }
+    ],
+    modelAnswer: `Empat faktor utama penghambat perdagangan internasional: 1) Kebijakan proteksi ekstrem, seperti tarif bea masuk yang sangat tinggi atau kuota impor ketat untuk melindungi industri lokal yang belum efisien. 2) Sanksi ekonomi, embargo, atau konflik geopolitik/perang yang memutus jalur logistik dan transaksi keuangan antarnegara. 3) Kebijakan sistem ekonomi tertutup (autarki) yang mengutamakan swasembada penuh dan menolak ketergantungan pihak asing. 4) Ketidakstabilan nilai tukar mata uang, rumitnya birokrasi kepabeanan, serta tidak tercapainya standar mutu/keamanan produk internasional.`
+  },
+  {
+    id: 40, type: 'essay', essayNum: 5, topic: `Daya Saing Ekspor & Dampak Makro`, level: `L3 (C6)`, difficulty: `Sulit`,
+    stimulusCaption: `Tantangan Daya Saing Ekspor Nasional`,
+    stimulusText: `Struktur ekspor Indonesia masih menghadapi tantangan berupa tingginya porsi komoditas mentah, biaya logistik pelabuhan yang mahal, serta kendala sertifikasi mutu di negara tujuan.`,
+    prompt: `Rumuskanlah minimal empat upaya konkret untuk meningkatkan daya saing ekspor Indonesia di pasar internasional, kemudian uraikan dampak positif keberhasilannya bagi perekonomian nasional!`,
+    keywords: [
+      { label: `Hilirisasi & nilai tambah`, terms: [`hilirisasi`, `olahan`, `nilai tambah`, `manufaktur`] },
+      { label: `Inovasi, mutu & sertifikasi`, terms: [`inovasi`, `teknologi`, `mutu`, `kualitas`, `sertifikasi`, `riset`] },
+      { label: `Efisiensi logistik & infrastruktur`, terms: [`logistik`, `pelabuhan`, `infrastruktur`, `efisiensi`, `biaya produksi`] },
+      { label: `Diversifikasi pasar / promosi / insentif`, terms: [`diversifikasi`, `pasar baru`, `perjanjian dagang`, `promosi`, `insentif`] },
+      { label: `Dampak makro (neraca, devisa, kurs, kerja)`, terms: [`neraca perdagangan`, `surplus`, `devisa`, `nilai tukar`, `rupiah`, `lapangan kerja`] }
+    ],
+    modelAnswer: `Upaya konkret peningkatan daya saing ekspor: 1) Mempercepat hilirisasi industri agar ekspor bergeser dari bahan mentah ke produk olahan bernilai tambah tinggi. 2) Efisiensi rantai pasok dan logistik pelabuhan guna menekan biaya angkut per unit produk. 3) Peningkatan inovasi desain, teknologi, serta kemudahan fasilitas sertifikasi mutu dan keberlanjutan (green standard). 4) Diversifikasi pasar ekspor ke negara non-tradisional melalui perjanjian dagang bilateral/regional serta dukungan pembiayaan ekspor bagi UMKM. Dampak bagi perekonomian nasional: neraca perdagangan berpeluang mencetak surplus berkelanjutan, cadangan devisa bertambah kuat, nilai tukar rupiah lebih stabil, dan penciptaan lapangan kerja sektor industri meningkat.`
+  }
+];
+
+var state = {
+  screen: 'identity', // 'identity' | 'exam' | 'result'
+  studentName: '',
+  studentClass: '',
+  currentIdx: 0,
+  viewMode: 'single', // 'single' | 'all'
+  answers: {}, // { [questionId]: number (0-4) | string (essay) }
+  flagged: {}, // { [questionId]: true }
+  timeLeftSec: TOTAL_DURATION_SEC,
+  startedAt: null,
+  submittedAt: null,
+  submitReason: null, // 'manual' | 'timeout'
+  violations: 0,
+  violationLog: [],
+  unlockedReview: false,
+  reviewFilter: 'all'
+};
+
+var timerInterval = null;
+var lastViolationAt = 0;
+var audioCtx = null;
+var warned10Min = false;
+var warned2Min = false;
+
+/* --- Audio Synthesis (Web Audio API, no external files) --- */
+function initAudioContext() {
+  try {
+    var AudioContextClass = window.AudioContext || window.webkitAudioContext;
+    if (AudioContextClass && !audioCtx) {
+      audioCtx = new AudioContextClass();
+    }
+    if (audioCtx && audioCtx.state === 'suspended') {
+      audioCtx.resume();
+    }
+  } catch (e) {
+    // Ignore if audio API blocked
+  }
+}
+
+function playAlertBeep(freq, durationSec) {
+  try {
+    initAudioContext();
+    if (!audioCtx) return;
+    var osc = audioCtx.createOscillator();
+    var gain = audioCtx.createGain();
+    osc.type = 'triangle';
+    osc.frequency.setValueAtTime(freq || 880, audioCtx.currentTime);
+    gain.gain.setValueAtTime(0.28, audioCtx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + (durationSec || 0.45));
+    osc.connect(gain);
+    gain.connect(audioCtx.destination);
+    osc.start();
+    osc.stop(audioCtx.currentTime + (durationSec || 0.45));
+  } catch (e) {
+    // Fallback silent if browser blocks autoplay audio
+  }
+}
+
+function playDoubleViolationBeep() {
+  playAlertBeep(880, 0.25);
+  setTimeout(function () {
+    playAlertBeep(660, 0.35);
+  }, 260);
+}
+
+/* --- State Persistence via Gemini Notebook Shim API --- */
+async function persistState() {
+  try {
+    if (window.notebookAppApi && typeof window.notebookAppApi.setAppState === 'function') {
+      await window.notebookAppApi.setAppState({
+        screen: state.screen,
+        studentName: state.studentName,
+        studentClass: state.studentClass,
+        currentIdx: state.currentIdx,
+        viewMode: state.viewMode,
+        answers: state.answers,
+        flagged: state.flagged,
+        timeLeftSec: state.timeLeftSec,
+        startedAt: state.startedAt,
+        submittedAt: state.submittedAt,
+        submitReason: state.submitReason,
+        violations: state.violations,
+        violationLog: state.violationLog,
+        unlockedReview: state.unlockedReview
+      });
+    }
+  } catch (e) {
+    // Non-fatal in preview
+  }
+}
+
+async function initApp() {
+  try {
+    if (window.notebookAppApi && typeof window.notebookAppApi.getAppState === 'function') {
+      var saved = await window.notebookAppApi.getAppState();
+      if (saved && saved.studentName) {
+        if (saved.screen === 'result') {
+          Object.assign(state, saved);
+          showResultScreen();
+        } else if (saved.screen === 'exam') {
+          var notice = document.getElementById('resume-notice');
+          var noticeText = document.getElementById('resume-notice-text');
+          var nameInput = document.getElementById('input-name');
+          if (nameInput) nameInput.value = saved.studentName;
+          if (notice && noticeText) {
+            var answeredCount = countAnswered(saved.answers || {});
+            noticeText.textContent = `Peserta: ` + saved.studentName + ` (` + saved.studentClass + `) • Terjawab ` + answeredCount + `/40 soal • Sisa waktu ` + formatTime(saved.timeLeftSec || 0) + `.`;
+            notice.classList.remove('hidden');
+            window.__savedResumePayload = saved;
+          }
+        }
+      }
+    }
+  } catch (e) {
+    // Ignore init state error
+  }
+
+  if (window.notebookAppApi && typeof window.notebookAppApi.notifyAppReady === 'function') {
+    window.notebookAppApi.notifyAppReady();
+  }
+}
+
+/* --- Identity Screen Handlers --- */
+function handleClassSelectChange(val) {
+  var wrap = document.getElementById('custom-class-wrap');
+  if (!wrap) return;
+  if (val === 'Lainnya') {
+    wrap.classList.remove('hidden');
+  } else {
+    wrap.classList.add('hidden');
+  }
+}
+
+function handleStartQuiz(e) {
+  e.preventDefault();
+  var nameInput = document.getElementById('input-name');
+  var classSelect = document.getElementById('input-class');
+  var customClassInput = document.getElementById('input-custom-class');
+  var errBox = document.getElementById('identity-error');
+
+  if (!nameInput || !classSelect || !errBox) return;
+
+  var nameVal = nameInput.value.trim();
+  var classVal = classSelect.value === 'Lainnya' && customClassInput ? customClassInput.value.trim() : classSelect.value;
+
+  if (nameVal.length < 3) {
+    errBox.textContent = `Nama lengkap wajib diisi minimal 3 karakter sebelum memulai ujian.`;
+    errBox.classList.remove('hidden');
+    nameInput.focus();
+    return;
+  }
+  if (!classVal) {
+    errBox.textContent = `Silakan pilih atau tuliskan kelas Anda terlebih dahulu.`;
+    errBox.classList.remove('hidden');
+    classSelect.focus();
+    return;
+  }
+
+  errBox.classList.add('hidden');
+  initAudioContext();
+
+  state.screen = 'exam';
+  state.studentName = nameVal;
+  state.studentClass = classVal;
+  state.currentIdx = 0;
+  state.viewMode = 'single';
+  state.answers = {};
+  state.flagged = {};
+  state.timeLeftSec = TOTAL_DURATION_SEC;
+  state.startedAt = new Date().toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' });
+  state.submittedAt = null;
+  state.submitReason = null;
+  state.violations = 0;
+  state.violationLog = [];
+  state.unlockedReview = false;
+  warned10Min = false;
+  warned2Min = false;
+
+  persistState();
+  enterExamScreen();
+}
+
+function resumeSavedExam() {
+  if (!window.__savedResumePayload) return;
+  initAudioContext();
+  Object.assign(state, window.__savedResumePayload);
+  state.screen = 'exam';
+  if (state.timeLeftSec <= 0) {
+    finalizeExam('timeout');
+    return;
+  }
+  enterExamScreen();
+}
+
+function discardSavedExam(btn) {
+  if (btn.dataset.armed !== 'true') {
+    btn.dataset.armed = 'true';
+    btn.textContent = `Klik lagi untuk hapus sesi`;
+    return;
+  }
+  window.__savedResumePayload = null;
+  var notice = document.getElementById('resume-notice');
+  if (notice) notice.classList.add('hidden');
+  state.screen = 'identity';
+  state.answers = {};
+  state.violations = 0;
+  persistState();
+}
+
+/* --- Exam Execution --- */
+function enterExamScreen() {
+  setActiveScreen('exam');
+  var statusLabel = document.getElementById('header-status-label');
+  if (statusLabel) statusLabel.textContent = `Tahap: Pengerjaan Aktif (Pengawasan Nyala)`;
+
+  updateExamHUD();
+  renderNavigator();
+  renderQuestionStage();
+  startCountdownTimer();
+}
+
+function setActiveScreen(name) {
+  var screens = ['identity', 'exam', 'result'];
+  for (var i = 0; i < screens.length; i++) {
+    var el = document.getElementById('screen-' + screens[i]);
+    if (el) {
+      if (screens[i] === name) el.classList.add('active');
+      else el.classList.remove('active');
+    }
+  }
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function formatTime(totalSec) {
+  var s = Math.max(0, Math.floor(totalSec));
+  var mins = Math.floor(s / 60);
+  var secs = s % 60;
+  return (mins < 10 ? '0' + mins : '' + mins) + ':' + (secs < 10 ? '0' + secs : '' + secs);
+}
+
+function startCountdownTimer() {
+  if (timerInterval) clearInterval(timerInterval);
+  updateTimerUI();
+  timerInterval = setInterval(function () {
+    if (state.screen !== 'exam') {
+      clearInterval(timerInterval);
+      return;
+    }
+    state.timeLeftSec -= 1;
+    updateTimerUI();
+
+    if (state.timeLeftSec % 10 === 0) {
+      persistState();
+    }
+
+    if (state.timeLeftSec === 600 && !warned10Min) {
+      warned10Min = true;
+      showTimeWarning(`Sisa Waktu 10 Menit`, `Segera periksa kembali jawaban Pilihan Ganda dan lengkapi bagian Uraian sebelum waktu habis.`);
+      playAlertBeep(523, 0.25);
+    }
+    if (state.timeLeftSec === 120 && !warned2Min) {
+      warned2Min = true;
+      showTimeWarning(`Sisa Waktu 2 Menit Terakhir!`, `Ujian akan dikumpulkan secara otomatis saat hitung mundur mencapai 00:00.`);
+      playAlertBeep(740, 0.35);
+    }
+
+    if (state.timeLeftSec <= 0) {
+      clearInterval(timerInterval);
+      finalizeExam('timeout');
+    }
+  }, 1000);
+}
+
+function updateTimerUI() {
+  var display = document.getElementById('timer-display');
+  var box = document.getElementById('timer-box');
+  if (!display || !box) return;
+  display.textContent = formatTime(state.timeLeftSec);
+  box.classList.remove('warning', 'urgent');
+  if (state.timeLeftSec <= 120) {
+    box.classList.add('urgent');
+  } else if (state.timeLeftSec <= 600) {
+    box.classList.add('warning');
+  }
+}
+
+function showTimeWarning(title, desc) {
+  var banner = document.getElementById('time-warning-banner');
+  var t = document.getElementById('time-warning-title');
+  var d = document.getElementById('time-warning-desc');
+  if (banner && t && d) {
+    t.textContent = title;
+    d.textContent = desc;
+    banner.classList.add('visible');
+  }
+}
+
+function dismissTimeWarning() {
+  var banner = document.getElementById('time-warning-banner');
+  if (banner) banner.classList.remove('visible');
+}
+
+/* --- Anti-Cheating System --- */
+function recordTabViolation(source) {
+  if (state.screen !== 'exam') return;
+  var now = Date.now();
+  if (now - lastViolationAt < 1200) return; // debounce concurrent visibilitychange + blur
+  lastViolationAt = now;
+
+  state.violations += 1;
+  var timeStamp = new Date().toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+  state.violationLog.push(`Pelanggaran #` + state.violations + ` pada pukul ` + timeStamp + ` (Sisa waktu ` + formatTime(state.timeLeftSec) + ` • ` + source + `)`);
+
+  playDoubleViolationBeep();
+  updateExamHUD();
+  persistState();
+
+  var banner = document.getElementById('violation-banner');
+  var title = document.getElementById('violation-banner-title');
+  var desc = document.getElementById('violation-banner-desc');
+  if (banner && title && desc) {
+    title.textContent = `Peringatan Pelanggaran Ke-` + state.violations + `: Terdeteksi Meninggalkan Halaman Ujian`;
+    desc.textContent = `Perpindahan tab atau jendela peramban pada pukul ` + timeStamp + ` telah direkam dan akan tampil pada laporan nilai guru.`;
+    banner.classList.add('visible');
+  }
+}
+
+function dismissViolationBanner() {
+  var banner = document.getElementById('violation-banner');
+  if (banner) banner.classList.remove('visible');
+}
+
+document.addEventListener('visibilitychange', function () {
+  if (document.hidden && state.screen === 'exam') {
+    recordTabViolation('Berpindah Tab');
+  }
+});
+
+window.addEventListener('blur', function () {
+  if (state.screen === 'exam') {
+    recordTabViolation('Keluar Fokus Jendela');
+  }
+});
+
+/* --- Exam Rendering --- */
+function countAnswered(ansMap) {
+  var count = 0;
+  for (var i = 0; i < QUESTIONS.length; i++) {
+    var q = QUESTIONS[i];
+    var val = ansMap[q.id];
+    if (q.type === 'pg' && typeof val === 'number') count++;
+    else if (q.type === 'essay' && typeof val === 'string' && val.trim().length > 0) count++;
+  }
+  return count;
+}
+
+function updateExamHUD() {
+  var hudName = document.getElementById('hud-name');
+  var hudClass = document.getElementById('hud-class');
+  var vBadge = document.getElementById('violation-badge');
+  var vText = document.getElementById('violation-count-text');
+  var pctEl = document.getElementById('nav-progress-pct');
+
+  var answered = countAnswered(state.answers);
+  if (hudName) hudName.textContent = state.studentName;
+  if (hudClass) hudClass.textContent = `Kelas ` + state.studentClass + ` • Terjawab ` + answered + `/40`;
+  if (pctEl) pctEl.textContent = Math.round((answered / QUESTIONS.length) * 100) + `%`;
+  if (vText) vText.textContent = `Pelanggaran: ` + state.violations;
+  if (vBadge) {
+    if (state.violations > 0) vBadge.classList.add('flagged');
+    else vBadge.classList.remove('flagged');
+  }
+}
+
+function getLevelTagClass(level) {
+  if (level.indexOf('L3') !== -1) return 'tag-hots';
+  if (level.indexOf('L2') !== -1) return 'tag-mots';
+  return 'tag-lots';
+}
+
+function escapeHTML(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+function buildQuestionCardHTML(q, idx, showNavFooter) {
+  var isFlagged = !!state.flagged[q.id];
+  var labelNum = q.type === 'pg' ? `SOAL ` + q.id + ` / 40 (PG)` : `SOAL ` + q.id + ` / 40 (URAIAN ` + q.essayNum + `)`;
+  var levelClass = getLevelTagClass(q.level);
+
+  var html = `<article class="question-card" id="q-card-` + q.id + `">`;
+  html += `<div class="q-header">
+    <div class="q-header-left">
+      <span class="q-number">` + labelNum + `</span>
+      <span class="q-topic">` + escapeHTML(q.topic) + `</span>
+      <span class="tag-chip ` + levelClass + `">` + escapeHTML(q.level) + ` • ` + escapeHTML(q.difficulty) + `</span>
+    </div>
+    <button type="button" class="btn btn-sm ` + (isFlagged ? `btn-accent` : `btn-secondary`) + `" onclick="toggleFlag(` + q.id + `)">` + (isFlagged ? `Ditandai Ragu` : `Tandai Ragu-ragu`) + `</button>
+  </div>`;
+
+  if (q.stimulusText || q.visual) {
+    html += `<div class="stimulus-box">`;
+    if (q.stimulusCaption) html += `<div class="stimulus-caption">` + escapeHTML(q.stimulusCaption) + `</div>`;
+    if (q.stimulusText) html += `<p class="stimulus-text">` + escapeHTML(q.stimulusText) + `</p>`;
+    if (q.visual) html += q.visual;
+    html += `</div>`;
+  }
+
+  html += `<p class="q-prompt">` + escapeHTML(q.prompt) + `</p>`;
+
+  if (q.type === 'pg') {
+    var letters = ['A', 'B', 'C', 'D', 'E'];
+    var selectedOpt = state.answers[q.id];
+    html += `<div class="options-list" role="radiogroup" aria-label="Pilihan jawaban soal ` + q.id + `">`;
+    for (var i = 0; i < q.options.length; i++) {
+      var isSel = selectedOpt === i;
+      html += `<button type="button" class="option-btn ` + (isSel ? `selected` : ``) + `" role="radio" aria-checked="` + isSel + `" onclick="selectPGOption(` + q.id + `, ` + i + `)">
+        <span class="option-key">` + letters[i] + `</span>
+        <span class="option-text">` + escapeHTML(q.options[i]) + `</span>
+      </button>`;
+    }
+    html += `</div>`;
+  } else {
+    var val = typeof state.answers[q.id] === 'string' ? state.answers[q.id] : '';
+    var wordCount = val.trim() ? val.trim().split(/\s+/).length : 0;
+    html += `<div class="form-group">
+      <label for="essay-input-` + q.id + `" class="form-label">Jawaban Uraian Analitis (Uraian ` + q.essayNum + `)</label>
+      <textarea id="essay-input-` + q.id + `" class="form-textarea" placeholder="Tuliskan analisis ekonomi, rumus perhitungan (jika ada), serta kesimpulan Anda secara terstruktur..." oninput="updateEssayAnswer(` + q.id + `, this.value)">` + escapeHTML(val) + `</textarea>
+      <div class="essay-meta">
+        <span>Disarankan minimal 20–40 kata dengan argumen terstruktur</span>
+        <span id="essay-wc-` + q.id + `">` + wordCount + ` kata</span>
+      </div>
+    </div>`;
+  }
+
+  if (showNavFooter) {
+    html += `<div class="q-nav-footer">
+      <button type="button" class="btn btn-secondary btn-sm" ` + (idx === 0 ? `disabled` : ``) + ` onclick="goToQuestion(` + (idx - 1) + `)">&larr; Soal Sebelumnya</button>
+      <span class="dossier-meta">Indeks ` + (idx + 1) + ` dari 40</span>
+      ` + (idx < QUESTIONS.length - 1
+        ? `<button type="button" class="btn btn-primary btn-sm" onclick="goToQuestion(` + (idx + 1) + `)">Soal Selanjutnya &rarr;</button>`
+        : `<button type="button" class="btn btn-accent btn-sm" onclick="openSubmitConfirm()">Selesai &amp; Kumpulkan</button>`
+      ) + `
+    </div>`;
+  }
+
+  html += `</article>`;
+  return html;
+}
+
+function renderQuestionStage() {
+  var stage = document.getElementById('question-stage');
+  if (!stage) return;
+
+  if (state.viewMode === 'single') {
+    var q = QUESTIONS[state.currentIdx] || QUESTIONS[0];
+    stage.innerHTML = buildQuestionCardHTML(q, state.currentIdx, true);
+  } else {
+    var allHtml = ``;
+    for (var i = 0; i < QUESTIONS.length; i++) {
+      allHtml += buildQuestionCardHTML(QUESTIONS[i], i, false);
+    }
+    allHtml += `<div class="figure-card" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:var(--space-sm);">
+      <span>Sudah memeriksa seluruh 40 butir soal?</span>
+      <button type="button" class="btn btn-primary" onclick="openSubmitConfirm()">Kumpulkan Jawaban Sekarang</button>
+    </div>`;
+    stage.innerHTML = allHtml;
+  }
+}
+
+function renderNavigator() {
+  var pgGrid = document.getElementById('nav-grid-pg');
+  var essayGrid = document.getElementById('nav-grid-essay');
+  if (!pgGrid || !essayGrid) return;
+
+  var pgHtml = ``;
+  var essayHtml = ``;
+
+  for (var i = 0; i < QUESTIONS.length; i++) {
+    var q = QUESTIONS[i];
+    var isCurrent = state.viewMode === 'single' && state.currentIdx === i;
+    var isFlagged = !!state.flagged[q.id];
+    var isAnswered = q.type === 'pg'
+      ? typeof state.answers[q.id] === 'number'
+      : (typeof state.answers[q.id] === 'string' && state.answers[q.id].trim().length > 0);
+
+    var cls = 'nav-num-btn';
+    if (isCurrent) cls += ' current';
+    else if (isFlagged) cls += ' flagged';
+    else if (isAnswered) cls += ' answered';
+
+    var label = q.type === 'pg' ? q.id : 'U' + q.essayNum;
+    var btn = `<button type="button" class="` + cls + `" aria-label="Ke soal ` + q.id + `" onclick="goToQuestion(` + i + `)">` + label + `</button>`;
+    if (q.type === 'pg') pgHtml += btn;
+    else essayHtml += btn;
+  }
+
+  pgGrid.innerHTML = pgHtml;
+  essayGrid.innerHTML = essayHtml;
+}
+
+function goToQuestion(idx) {
+  if (idx < 0 || idx >= QUESTIONS.length) return;
+  state.currentIdx = idx;
+  if (state.viewMode === 'all') {
+    var el = document.getElementById('q-card-' + QUESTIONS[idx].id);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    renderNavigator();
+  } else {
+    renderQuestionStage();
+    renderNavigator();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  persistState();
+}
+
+function toggleViewMode() {
+  var btn = document.getElementById('view-mode-btn');
+  state.viewMode = state.viewMode === 'single' ? 'all' : 'single';
+  if (btn) {
+    btn.textContent = state.viewMode === 'single' ? `Lihat Semua Soal` : `Mode Per Soal`;
+  }
+  renderQuestionStage();
+  renderNavigator();
+  persistState();
+}
+
+function selectPGOption(qId, optIdx) {
+  state.answers[qId] = optIdx;
+  updateExamHUD();
+  renderNavigator();
+  if (state.viewMode === 'single') {
+    renderQuestionStage();
+  } else {
+    var card = document.getElementById('q-card-' + qId);
+    if (card) {
+      var btns = card.querySelectorAll('.option-btn');
+      for (var i = 0; i < btns.length; i++) {
+        if (i === optIdx) {
+          btns[i].classList.add('selected');
+          btns[i].setAttribute('aria-checked', 'true');
+        } else {
+          btns[i].classList.remove('selected');
+          btns[i].setAttribute('aria-checked', 'false');
+        }
+      }
+    }
+  }
+  persistState();
+}
+
+function updateEssayAnswer(qId, value) {
+  state.answers[qId] = value;
+  var wcEl = document.getElementById('essay-wc-' + qId);
+  if (wcEl) {
+    var wc = value.trim() ? value.trim().split(/\s+/).length : 0;
+    wcEl.textContent = wc + ` kata`;
+  }
+  updateExamHUD();
+  renderNavigator();
+  persistState();
+}
+
+function toggleFlag(qId) {
+  if (state.flagged[qId]) delete state.flagged[qId];
+  else state.flagged[qId] = true;
+  renderNavigator();
+  if (state.viewMode === 'single') {
+    renderQuestionStage();
+  } else {
+    var card = document.getElementById('q-card-' + qId);
+    if (card) {
+      var idx = -1;
+      for (var i = 0; i < QUESTIONS.length; i++) {
+        if (QUESTIONS[i].id === qId) { idx = i; break; }
+      }
+      if (idx !== -1) {
+        var newHtml = buildQuestionCardHTML(QUESTIONS[idx], idx, false);
+        card.outerHTML = newHtml;
+      }
+    }
+  }
+  persistState();
+}
+
+/* --- Submit & Grading --- */
+function openSubmitConfirm() {
+  var panel = document.getElementById('submit-confirm-panel');
+  var summary = document.getElementById('submit-confirm-summary');
+  if (!panel || !summary) return;
+
+  var pgAnswered = 0;
+  var essayAnswered = 0;
+  for (var i = 0; i < QUESTIONS.length; i++) {
+    var q = QUESTIONS[i];
+    if (q.type === 'pg' && typeof state.answers[q.id] === 'number') pgAnswered++;
+    if (q.type === 'essay' && typeof state.answers[q.id] === 'string' && state.answers[q.id].trim().length > 0) essayAnswered++;
+  }
+
+  summary.textContent = `Terjawab: ` + pgAnswered + ` dari 35 Pilihan Ganda dan ` + essayAnswered + ` dari 5 Uraian. Sisa waktu: ` + formatTime(state.timeLeftSec) + `.`;
+  panel.classList.add('visible');
+  panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function closeSubmitConfirm() {
+  var panel = document.getElementById('submit-confirm-panel');
+  if (panel) panel.classList.remove('visible');
+}
+
+function finalizeExam(reason) {
+  if (timerInterval) clearInterval(timerInterval);
+  state.screen = 'result';
+  state.submitReason = reason;
+  state.submittedAt = new Date().toLocaleString('id-ID', {
+    day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit'
+  });
+  if (reason === 'timeout') {
+    state.timeLeftSec = 0;
+    playAlertBeep(440, 0.5);
+  }
+  persistState();
+  showResultScreen();
+}
+
+function evaluateResults() {
+  var pgCorrect = 0;
+  var pgBlank = 0;
+  for (var i = 0; i < 35; i++) {
+    var q = QUESTIONS[i];
+    if (typeof state.answers[q.id] !== 'number') pgBlank++;
+    else if (state.answers[q.id] === q.answer) pgCorrect++;
+  }
+
+  var pgPoints = pgCorrect * 2; // Max 70
+  var pgScale100 = Math.round((pgCorrect / 35) * 1000) / 10;
+
+  var essayDetails = [];
+  var essayPointsTotal = 0;
+  for (var j = 35; j < QUESTIONS.length; j++) {
+    var eq = QUESTIONS[j];
+    var rawText = typeof state.answers[eq.id] === 'string' ? state.answers[eq.id].trim() : '';
+    var lower = rawText.toLowerCase();
+    var matchedLabels = [];
+    var missedLabels = [];
+
+    for (var k = 0; k < eq.keywords.length; k++) {
+      var kwGroup = eq.keywords[k];
+      var hit = false;
+      for (var t = 0; t < kwGroup.terms.length; t++) {
+        if (lower.indexOf(kwGroup.terms[t]) !== -1) {
+          hit = true;
+          break;
+        }
+      }
+      if (hit) matchedLabels.push(kwGroup.label);
+      else missedLabels.push(kwGroup.label);
+    }
+
+    var ratio = eq.keywords.length > 0 ? matchedLabels.length / eq.keywords.length : 0;
+    var pts = 0;
+    if (rawText.length >= 10) {
+      pts = Math.round(ratio * 6 * 10) / 10;
+      if (pts === 0 && rawText.length >= 25) pts = 1; // effort baseline if answered substantively
+    }
+    essayPointsTotal += pts;
+    essayDetails.push({
+      id: eq.id,
+      essayNum: eq.essayNum,
+      points: pts,
+      maxPoints: 6,
+      matchedLabels: matchedLabels,
+      missedLabels: missedLabels,
+      answered: rawText.length > 0
+    });
+  }
+
+  essayPointsTotal = Math.round(essayPointsTotal * 10) / 10;
+  var totalScore = Math.round((pgPoints + essayPointsTotal) * 10) / 10;
+  var usedSec = TOTAL_DURATION_SEC - Math.max(0, state.timeLeftSec);
+
+  return {
+    pgCorrect: pgCorrect,
+    pgBlank: pgBlank,
+    pgPoints: pgPoints,
+    pgScale100: pgScale100,
+    essayPointsTotal: essayPointsTotal,
+    essayDetails: essayDetails,
+    totalScore: totalScore,
+    usedMinutes: Math.floor(usedSec / 60),
+    usedSeconds: usedSec % 60
+  };
+}
+
+function buildClipboardReportText(metrics) {
+  var reasonLabel = state.submitReason === 'timeout' ? 'Otomatis (Waktu Habis)' : 'Dikumpulkan Peserta';
+  var integrityLabel = state.violations === 0
+    ? 'Bersih (Tidak terdeteksi keluar tab)'
+    : 'Terdeteksi ' + state.violations + ' kali meninggalkan halaman ujian';
+
+  var lines = [
+    `LAPORAN HASIL ASESMEN EKONOMI KELAS XII (SEMESTER GANJIL)`,
+    `========================================================`,
+    `Nama Lengkap   : ` + state.studentName,
+    `Kelas          : ` + state.studentClass,
+    `Waktu Selesai  : ` + (state.submittedAt || '-'),
+    `Durasi Pakai   : ` + metrics.usedMinutes + ` menit ` + metrics.usedSeconds + ` detik`,
+    `Status Kumpul  : ` + reasonLabel,
+    `--------------------------------------------------------`,
+    `SKOR TOTAL     : ` + metrics.totalScore + ` / 100`,
+    `Nilai PG (70%) : ` + metrics.pgCorrect + ` / 35 Benar (` + metrics.pgPoints + ` poin | Skala 100: ` + metrics.pgScale100 + `)`,
+    `Est. Uraian 30%: ` + metrics.essayPointsTotal + ` / 30 poin (Estimasi kata kunci, perlu cek guru)`,
+    `Pelanggaran Tab: ` + state.violations + ` kali (` + integrityLabel + `)`,
+    `========================================================`,
+    `Rincian Estimasi Uraian:`
+  ];
+
+  for (var i = 0; i < metrics.essayDetails.length; i++) {
+    var ed = metrics.essayDetails[i];
+    lines.push(`- Uraian ` + ed.essayNum + ` (No. ` + ed.id + `): ` + (ed.answered ? ed.points + `/6 poin` : `Tidak dijawab (0/6)`));
+  }
+
+  return lines.join('\n');
+}
+
+function showResultScreen() {
+  setActiveScreen('result');
+  var statusLabel = document.getElementById('header-status-label');
+  if (statusLabel) statusLabel.textContent = `Tahap: Laporan Hasil Sesi`;
+
+  var metrics = evaluateResults();
+
+  var metaEl = document.getElementById('result-submit-meta');
+  var studentBadge = document.getElementById('result-student-badge');
+  var subtitle = document.getElementById('result-subtitle');
+  if (metaEl) metaEl.textContent = (state.submitReason === 'timeout' ? `Auto-Submit Waktu Habis` : `Dikumpulkan Manual`) + ` • ` + (state.submittedAt || '');
+  if (studentBadge) studentBadge.textContent = state.studentName + ` • Kelas ` + state.studentClass;
+  if (subtitle) subtitle.textContent = `Peserta ` + state.studentName + ` (` + state.studentClass + `) menyelesaikan asesmen dalam ` + metrics.usedMinutes + ` menit ` + metrics.usedSeconds + ` detik.`;
+
+  var elTotal = document.getElementById('kpi-total-score');
+  var elPg = document.getElementById('kpi-pg-score');
+  var elPgSub = document.getElementById('kpi-pg-sub');
+  var elEssay = document.getElementById('kpi-essay-score');
+  var elViol = document.getElementById('kpi-violations');
+  var elViolSub = document.getElementById('kpi-violations-sub');
+
+  if (elTotal) elTotal.textContent = metrics.totalScore + ` / 100`;
+  if (elPg) elPg.textContent = metrics.pgCorrect + ` / 35`;
+  if (elPgSub) elPgSub.textContent = metrics.pgPoints + ` / 70 poin (Skala 100: ` + metrics.pgScale100 + `)`;
+  if (elEssay) elEssay.textContent = metrics.essayPointsTotal + ` / 30`;
+  if (elViol) {
+    elViol.textContent = state.violations + ` Kali`;
+    elViol.style.color = state.violations === 0 ? 'var(--positive)' : 'var(--error)';
+  }
+  if (elViolSub) {
+    elViolSub.textContent = state.violations === 0 ? `Integritas bersih (0 pelanggaran)` : `Terdeteksi keluar tab/jendela ujian`;
+  }
+
+  var vBox = document.getElementById('violation-log-box');
+  var vList = document.getElementById('violation-log-list');
+  if (vBox && vList) {
+    if (state.violationLog && state.violationLog.length > 0) {
+      var listHtml = ``;
+      for (var i = 0; i < state.violationLog.length; i++) {
+        listHtml += `<li>` + escapeHTML(state.violationLog[i]) + `</li>`;
+      }
+      vList.innerHTML = listHtml;
+      vBox.classList.remove('hidden');
+    } else {
+      vBox.classList.add('hidden');
+    }
+  }
+
+  var previewEl = document.getElementById('copy-summary-preview');
+  if (previewEl) {
+    previewEl.textContent = buildClipboardReportText(metrics);
+  }
+
+  if (state.unlockedReview) {
+    unlockReviewUI(metrics);
+  } else {
+    var gate = document.getElementById('review-locked-gate');
+    var panel = document.getElementById('review-unlocked-panel');
+    if (gate) gate.classList.remove('hidden');
+    if (panel) panel.classList.add('hidden');
+  }
+}
+
+function copyReportSummary() {
+  var previewEl = document.getElementById('copy-summary-preview');
+  var feedbackEl = document.getElementById('copy-feedback');
+  if (!previewEl || !feedbackEl) return;
+
+  var text = previewEl.textContent;
+  var onSuccess = function () {
+    feedbackEl.textContent = `Ringkasan nilai berhasil disalin ke papan klip! Silakan tempel (Paste) untuk dikirimkan kepada guru.`;
+    feedbackEl.className = 'form-success';
+    feedbackEl.classList.remove('hidden');
+  };
+
+  if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+    navigator.clipboard.writeText(text).then(onSuccess).catch(function () {
+      fallbackCopyText(text, onSuccess, feedbackEl);
+    });
+  } else {
+    fallbackCopyText(text, onSuccess, feedbackEl);
+  }
+}
+
+function fallbackCopyText(text, onSuccess, feedbackEl) {
+  try {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    var ok = document.execCommand('copy');
+    document.body.removeChild(ta);
+    if (ok) {
+      onSuccess();
+    } else {
+      feedbackEl.textContent = `Salin otomatis diblokir peramban; silakan blok teks di kotak laporan di atas lalu tekan Ctrl+C.`;
+      feedbackEl.className = 'form-error';
+      feedbackEl.classList.remove('hidden');
+    }
+  } catch (e) {
+    feedbackEl.textContent = `Silakan pilih teks di kotak laporan di atas lalu salin secara manual.`;
+    feedbackEl.className = 'form-error';
+    feedbackEl.classList.remove('hidden');
+  }
+}
+
+function downloadReportText() {
+  var previewEl = document.getElementById('copy-summary-preview');
+  if (!previewEl) return;
+  var safeName = (state.studentName || 'Peserta').replace(/[^a-zA-Z0-9_-]/g, '_');
+  var filename = `Hasil_Ekonomi_XII_` + safeName + `.txt`;
+  var content = previewEl.textContent;
+
+  if (window.notebookAppApi && typeof window.notebookAppApi.triggerFileDownload === 'function') {
+    window.notebookAppApi.triggerFileDownload({
+      content: content,
+      contentType: 'text/plain',
+      encoding: 'UTF-8',
+      filename: filename
+    });
+  } else {
+    var blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
+}
+
+function restartExam(btn) {
+  if (btn.dataset.armed !== 'true') {
+    btn.dataset.armed = 'true';
+    btn.textContent = `Klik lagi untuk konfirmasi ulang`;
+    return;
+  }
+  btn.dataset.armed = 'false';
+  btn.textContent = `Ulangi Ujian Baru`;
+
+  state.screen = 'identity';
+  state.answers = {};
+  state.flagged = {};
+  state.violations = 0;
+  state.violationLog = [];
+  state.unlockedReview = false;
+  state.timeLeftSec = TOTAL_DURATION_SEC;
+  persistState();
+
+  var statusLabel = document.getElementById('header-status-label');
+  if (statusLabel) statusLabel.textContent = `Tahap: Registrasi Peserta`;
+  setActiveScreen('identity');
+}
+
+/* --- Password Gate & Review Rendering --- */
+function handleUnlockReview(e) {
+  e.preventDefault();
+  var input = document.getElementById('input-password');
+  var errEl = document.getElementById('password-error');
+  if (!input || !errEl) return;
+
+  if (input.value.trim() === ACCESS_CODE) {
+    errEl.classList.add('hidden');
+    state.unlockedReview = true;
+    persistState();
+    unlockReviewUI(evaluateResults());
+  } else {
+    errEl.textContent = `Kode akses salah. Pastikan huruf kapital sesuai (hubungi guru mata pelajaran).`;
+    errEl.classList.remove('hidden');
+    input.focus();
+  }
+}
+
+function unlockReviewUI(metrics) {
+  var gate = document.getElementById('review-locked-gate');
+  var panel = document.getElementById('review-unlocked-panel');
+  if (gate) gate.classList.add('hidden');
+  if (panel) panel.classList.remove('hidden');
+  renderReviewList(metrics || evaluateResults());
+}
+
+function setReviewFilter(filterKey, btnEl) {
+  state.reviewFilter = filterKey;
+  var chips = document.querySelectorAll('.filter-chip');
+  for (var i = 0; i < chips.length; i++) {
+    chips[i].classList.remove('active');
+  }
+  if (btnEl) btnEl.classList.add('active');
+  renderReviewList(evaluateResults());
+}
+
+function renderReviewList(metrics) {
+  var container = document.getElementById('review-list');
+  if (!container) return;
+  var letters = ['A', 'B', 'C', 'D', 'E'];
+  var html = ``;
+  var shown = 0;
+
+  for (var i = 0; i < QUESTIONS.length; i++) {
+    var q = QUESTIONS[i];
+    var isPG = q.type === 'pg';
+    var userVal = state.answers[q.id];
+    var isCorrect = isPG && userVal === q.answer;
+
+    if (state.reviewFilter === 'wrong' && (!isPG || isCorrect)) continue;
+    if (state.reviewFilter === 'correct' && (!isPG || !isCorrect)) continue;
+    if (state.reviewFilter === 'essay' && isPG) continue;
+    if (state.reviewFilter === 'hots' && q.level.indexOf('L3') === -1) continue;
+
+    shown++;
+    var itemCls = isPG ? (isCorrect ? 'correct' : 'wrong') : 'essay';
+    var statusBadge = isPG
+      ? (isCorrect ? `<span class="tag-chip" style="background:var(--positive-soft); color:var(--positive);">Benar (+2 Poin)</span>` : `<span class="tag-chip" style="background:var(--error-soft); color:var(--error);">Salah / Kosong</span>`)
+      : `<span class="tag-chip tag-mots">Uraian ` + q.essayNum + `</span>`;
+
+    html += `<div class="review-item ` + itemCls + `">
+      <div class="q-header">
+        <div class="q-header-left">
+          <span class="q-number">NO. ` + q.id + `</span>
+          <span class="q-topic">` + escapeHTML(q.topic) + `</span>
+          <span class="tag-chip ` + getLevelTagClass(q.level) + `">` + escapeHTML(q.level) + `</span>
+        </div>
+        ` + statusBadge + `
+      </div>`;
+
+    if (q.stimulusText || q.visual) {
+      html += `<div class="stimulus-box">`;
+      if (q.stimulusText) html += `<p class="stimulus-text">` + escapeHTML(q.stimulusText) + `</p>`;
+      if (q.visual) html += q.visual;
+      html += `</div>`;
+    }
+
+    html += `<p class="q-prompt">` + escapeHTML(q.prompt) + `</p>`;
+
+    if (isPG) {
+      var userText = typeof userVal === 'number' ? letters[userVal] + `. ` + q.options[userVal] : `Tidak dijawab`;
+      var keyText = letters[q.answer] + `. ` + q.options[q.answer];
+      html += `<div class="answer-compare-grid">
+        <div class="compare-cell">
+          <div class="kpi-mini-label">Jawaban Anda</div>
+          <div style="margin-top:var(--space-xs); font-weight:600; color:` + (isCorrect ? `var(--positive)` : `var(--error)`) + `;">` + escapeHTML(userText) + `</div>
+        </div>
+        <div class="compare-cell">
+          <div class="kpi-mini-label">Kunci Jawaban Resmi</div>
+          <div style="margin-top:var(--space-xs); font-weight:600; color:var(--positive);">` + escapeHTML(keyText) + `</div>
+        </div>
+      </div>
+      <div class="explanation-box">
+        <strong>Pembahasan:</strong> ` + escapeHTML(q.explanation) + `
+      </div>`;
+    } else {
+      var ed = null;
+      for (var m = 0; m < metrics.essayDetails.length; m++) {
+        if (metrics.essayDetails[m].id === q.id) { ed = metrics.essayDetails[m]; break; }
+      }
+      var essayAns = typeof userVal === 'string' && userVal.trim().length > 0 ? userVal : `(Tidak dijawab)`;
+      html += `<div class="compare-cell">
+        <div class="kpi-mini-label">Jawaban Anda (` + (ed ? ed.points + `/6 Poin Otomatis` : `0/6`) + `)</div>
+        <div style="margin-top:var(--space-xs); white-space:pre-wrap;">` + escapeHTML(essayAns) + `</div>
+      </div>
+      <div class="explanation-box">
+        <strong>Model Jawaban &amp; Rubrik Penilaian:</strong>
+        <p style="margin:var(--space-xs) 0;">` + escapeHTML(q.modelAnswer) + `</p>
+        ` + (ed ? `<div style="font-size:0.875rem; color:var(--on-surface-variant);">
+          <strong>Konsep Terdeteksi:</strong> ` + (ed.matchedLabels.length ? escapeHTML(ed.matchedLabels.join(', ')) : 'Belum ada') + `
+        </div>` : ``) + `
+      </div>`;
+    }
+
+    html += `</div>`;
+  }
+
+  if (shown === 0) {
+    html = `<div class="aside-box">Tidak ada soal pada filter kategori ini.</div>`;
+  }
+  container.innerHTML = html;
+}
+
+window.addEventListener('DOMContentLoaded', initApp);
+</script>
+</body>
+</html>
